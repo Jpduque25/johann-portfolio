@@ -1,0 +1,183 @@
+
+@use 'style' as *;
+
+.project-container.desktop , .project-container.mobile{
+    text-decoration: none;
+    color: $grey;
+}
+
+.project-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+        color: $grey;
+
+        .first{
+            font-size: 2rem;
+        }
+
+        .second{
+            font-size: 3.125rem;
+            line-height: 100%;
+        }
+
+        &:hover{
+            color: $grey;
+        }
+}
+
+
+.project-card:hover .second::after {
+    background-color: $grey;
+    width: 100%;
+}
+
+.second::after{
+    content: "";
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	height: 3px;
+	width: 0;
+	transition: 0.3s;
+}
+
+
+
+
+
+.project-container.mobile{
+    width: 100vw;
+    height: 350px;
+    background-color: $white;
+    margin-bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .project-text{
+        font-family: $kaneda-gothic;
+        font-size: 3.125rem;
+    }
+
+}
+
+
+
+.project-container.desktop{
+    display: none;
+}
+
+
+.project-card{
+    width: 100%;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+    border-radius: 20px;
+
+    filter: saturate(0);
+    transition: 300ms ease-in;
+}
+
+.project-card:hover{
+    filter: saturate(100%);
+}
+
+
+@media screen and (min-width: 320px ) {
+
+    // NEXT PROJECT CARD
+    .project-card{
+
+        img{
+            display: block;
+            max-width: 100%;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px; 
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .project-text{
+            .second{
+                text-align: center;
+            }
+        }
+        
+    }
+
+}
+
+
+@media screen and (min-width: 768px){
+
+    .project-card{
+        width: 100%;
+
+        .project-text{
+            .second{
+                text-align: left;
+            }
+        }
+    }
+
+    .project-container.mobile{
+        display: none;
+    }
+    
+    .project-container.desktop{
+        margin-left: 2.75rem;
+        height: 450px;
+        background-color: $white;
+        margin-bottom: 120px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 64px;
+
+        .project-text{
+            font-family: $kaneda-gothic;
+            font-size: 6rem;
+            align-items: start;
+        }
+    
+        .arrow{
+            width: 600px;
+            height: 450px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow1.prev{
+            transform: rotate(180deg);
+        }
+        
+        .project-text{
+            .second{
+                font-size: 6rem;
+            }
+        }
+    }
+
+    .project-container.desktop.prev{
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+     .project-container.desktop{
+        .left{
+            margin-left: 0px;
+        }
+    }
+
+}

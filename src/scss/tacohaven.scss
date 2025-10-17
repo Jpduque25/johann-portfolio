@@ -1,0 +1,97 @@
+@use 'style' as *;
+
+.tacohaven-writeup{
+    h3{
+        text-align: center;
+    }
+
+    .rectangle.first, .rectangle.second, .rectangle.third{
+        display: inline-block;
+        background-color: $grey;
+        border-radius: 8px;
+        width: 4px;
+    }
+
+    .goals{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+     
+    }
+
+    .title{
+        margin-bottom: 10px;
+    }
+
+    .goal{
+        margin-left: 12px;
+    }
+
+    .code-snippet{
+
+        h3{
+            text-align: left;
+        }
+
+        ul{
+            margin-left: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 320px){
+       .tacohaven-writeup{
+        .rectangle.first{
+            height: 154px;
+        }
+        
+        .rectangle.second{
+        height: 190px;
+        }
+    
+        .rectangle.third{
+        height: 114px;
+        }
+
+        .container{
+            margin-bottom: 50px;
+        }
+        
+    }
+
+}
+
+@media screen and (min-width: 425px){
+    .tacohaven-writeup{
+        .rectangle.first{
+            height: 105px;
+        }
+        
+        .rectangle.second{
+        height: 130px;
+        }
+        
+        .rectangle.third{
+        height: 80px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .tacohaven-writeup{
+        .rectangle.first{
+            height: 76px;
+        }
+        
+        .rectangle.second{
+        height: 106px;
+        }
+    
+        .rectangle.third{
+        height: 74px;
+        }
+
+        
+    }
+}
+

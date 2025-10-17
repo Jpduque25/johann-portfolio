@@ -1,0 +1,85 @@
+@use 'style' as *;
+
+
+.banner-image{
+    width: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+
+// INTRO OF PROJECT
+.projectbanner{
+    position: relative;
+
+    .banner-text{
+        max-width: 18.75rem;
+        margin: 20rem auto 2rem auto;
+        animation: textanimate 1.15s ease-in-out forwards;
+    }
+}
+
+
+.banner-text{
+    h1{
+    line-height: 100%;
+    }
+}
+
+
+p, li{
+    line-height: 160%;
+}
+
+
+@media screen and (min-width: 320px){
+
+
+
+}
+
+
+@media screen and (min-width: 425px) {
+
+    .projectbanner{
+        .banner-text{
+            max-width: 24rem;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+
+     .projectbanner{
+        .banner-text{
+            max-width: 42.5rem;
+            margin: 30rem auto 4rem auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .banner-image{
+        height: 650px;
+    }   
+
+ 
+    .projectbanner{
+        .banner-text{
+            max-width: 57.5rem;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+
+    .projectbanner{
+
+        .banner-text{
+            max-width: 68rem;
+        }
+    }
+}

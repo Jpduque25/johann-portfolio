@@ -1,0 +1,248 @@
+@use 'style' as *;
+
+
+// ---------------------------About Page-------------------------------
+.myprofile{
+
+    h2{
+        line-height: 100%;
+    }
+
+    h5{
+        margin-bottom: 50px;
+    }
+
+    .main-header{
+        animation: textanimate 1.15s ease-in-out forwards;
+    }
+
+    .second h1, .second .text-glow {
+        display: inline; 
+    }
+
+    .text-glow{
+        margin-left: 10px;
+
+        color: $white;
+        -webkit-text-stroke: 1px #6B68FF;
+        text-shadow: 2px 8px 8px rgba(107, 104, 255, 0.25); 
+    }
+
+
+    .bio{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+
+        
+        .bio-item img {
+            border-radius: 20px;
+        }
+    }
+
+
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 80px;
+
+        ul{
+            list-style-type: none;
+            margin-left: 0px;
+        }
+    }
+
+ 
+
+    .credentials, .education, .certificates{
+        
+        .row{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            margin-bottom: 95px;
+            grid-gap: 150px;
+        }
+
+    }
+}
+
+
+.personaldetails{
+
+    .email{
+        width: 245px;
+        height: 46px;
+        padding: 8px 35px;
+        border-radius: 20px;
+        border: 2px solid $grey;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 25px;
+
+        a{
+            color: $grey;
+            text-decoration: none;
+        }
+    }
+
+
+    .instagram, .linkedin{
+        width: 60px;
+        height: 60px;
+        background-color: $grey;
+        border-radius: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor:pointer;
+    }
+
+   
+
+}
+
+
+
+// ------ MEDIA QUERIES
+
+@media screen and (min-width: 320px){
+
+
+      .myprofile{
+
+        h5{
+            margin-bottom: 32px;
+            font-size: 18px;
+        }
+
+        .main-header{
+            margin: 150px 0px 48px 0px;
+        }
+
+        .bio{
+            flex-direction: column;
+        }
+
+        .text-glow{
+            margin: 0;
+        }
+
+
+        .skills{
+            grid-template-columns: 1fr;
+            margin:auto;
+            gap: 80px;
+        }
+
+
+        .credentials, .education, .certificates{
+            .row{
+                h4{
+                    margin-bottom: 10px;
+                }
+                
+                grid-template-columns: 1fr;
+                margin-bottom: 80px;
+                grid-gap: 0px;
+            }
+        
+        }
+    }
+
+      .personaldetails{
+
+    
+        .grid{
+            grid-template-columns: 1fr;
+            gap: 32px;
+
+            // .contact-info.left{
+            //     display: none;
+            // }
+
+            .left{
+                margin-bottom: 32px;
+            }
+
+            .right{
+                display: flex;
+                flex-direction: column;
+                gap:32px;
+
+                h2{
+                    margin-bottom: 0px;
+                }
+            }
+            
+        }
+        
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .myprofile{
+
+        .main-header{
+            margin: 200px 0px 80px 0px;
+        }
+
+        .bio{
+            display: flex;
+            flex-direction: row;
+
+            .bio-item {
+              flex: 1;
+            }
+
+        }
+
+        .skills{
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 100px;
+        }
+    }
+
+    .personaldetails{
+            
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 100px;
+
+            .contact-info.left{
+                display: block;
+            }
+
+            .contact-info.right{
+                display: none;
+                margin-top: 0px;
+            }
+
+            .left{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;         
+            }
+
+            .right{
+                flex-direction: column;
+                justify-content: space-evenly;         
+                gap:100px;
+            }
+            
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px){
+        .myprofile{
+        .skills{
+            grid-gap: 232px;
+        }
+    }
+}

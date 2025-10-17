@@ -1,0 +1,252 @@
+//  CSS ANIMATION
+
+// Home page
+
+@keyframes title-first {
+  from{
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
+@keyframes title-second {
+  from{
+    opacity: 0;
+    transform: translateX(15%);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
+@keyframes title-img {
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+
+
+
+@keyframes projectitem {
+  0%{
+      opacity: 0%;
+      transform: translateY(5%);
+  }
+
+  100%{
+      opacity: 100%;
+      transform: translateY(0%);
+  }
+}
+
+@keyframes project-title{
+  from{
+    opacity: 0;
+    transform: translateY(120%);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+@keyframes moveText{
+  0%{
+      opacity: 0;
+      transform: translateY(100%);                
+  }
+
+  30%{
+      opacity: 1;
+  }
+  
+  50%{
+      opacity: 1;
+  }
+
+  100%{
+      opacity: 0;
+      transform: translateY(0%);
+  }
+}
+
+@keyframes moveTextLast{
+  0%{
+      opacity: 0;
+      transform: translateY(100%);                
+  }
+
+  30%{
+      opacity: 1;
+  }
+  
+  50%{
+      opacity: 1;
+  }
+
+  100%{
+      opacity: 1;
+      transform: translateY(0%);
+      scale: 1.15;
+  }
+}
+
+@keyframes scrollDown{
+  0%{
+    opacity: 0;
+  }
+
+  30%{
+    opacity: 1;
+  }
+
+  60%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    top: 90%;
+  }
+
+}
+
+@keyframes btnHover{
+  0%{
+    top:0%;
+
+
+  }
+
+  50%{
+    top:10%;
+
+
+
+  }
+
+  100%{
+    top:0%;
+
+
+
+  }
+}
+
+
+
+
+@keyframes cardhover{
+  0%{
+      transform: translateY(0%);
+  }
+
+  50%{
+      transform: translateY(-5%);
+  }
+
+  100%{
+      transform: translateY(0%);
+  }
+}
+
+
+
+// about page
+@keyframes aboutimg{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes aboutblurb {
+  from{
+    opacity: 0;
+    transform: translateX(30%);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes aboutcontent {
+    from{
+      opacity: 0;
+    }
+
+    to{
+      opacity: 1;
+
+    }
+
+}
+
+@keyframes quote{
+  from{
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+
+  }
+
+}
+
+@keyframes myskills{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+// NEW ANIMATION ------------- //
+
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+@keyframes textanimate{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+}
+

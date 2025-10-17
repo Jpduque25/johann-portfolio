@@ -1,0 +1,88 @@
+// import main scss file
+@use 'style' as *;
+
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  justify-content: center;
+  // margin-left:-15px; /* gutter size offset */
+  width: 75vw;
+  margin:  auto;
+
+}
+.my-masonry-grid_column {
+  padding-left: 15px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > .grid-item { /* change div to reference your elements you put in <Masonry> */
+//   background: grey;
+  margin-bottom: 60px;
+}
+
+.grid-item img{
+  width: 100%;
+  height: auto;
+}
+
+
+ h1, h2{
+     line-height: 100%;
+   }
+
+      
+.heading{
+   animation: textanimate 1.15s ease-in-out forwards;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 120px 0px;
+  max-width: 75vw;
+  margin: auto;
+
+}
+
+/* Children */
+.text-block {
+  flex: 1;
+  text-align: left;
+}
+
+.subtext {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .text-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-block,
+  .subtext {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 2560px){
+  .text-container{
+    flex-direction: column;
+      gap: 6rem;
+
+  }
+
+}

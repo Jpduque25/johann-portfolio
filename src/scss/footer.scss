@@ -1,0 +1,99 @@
+
+@use 'style' as *;
+
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 20px;
+   
+}
+
+.contact-grid.logo img{
+    width: 100px;
+    height: auto;
+}
+
+
+
+@media screen and (min-width: 320px){
+    
+    footer{
+        padding: 3.125rem 0rem;
+        background-color: $white;
+        color:$grey;
+    
+        h3{
+            margin-bottom: 10px;
+        }
+    
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .contact-grid-container{
+
+            font-family: $nunito;
+            font-size: 16px;    
+            line-height: 160%; 
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 40px;
+            margin: 0px 25px;
+
+            .contact-grid.logo{
+                margin-bottom: 80px;
+            }
+    
+    
+            a{
+                text-decoration: none;
+                color: $grey;
+            }
+        
+        }
+        
+        .logo{
+            justify-self: center;
+            align-self: center;
+        }
+    
+        .copyright{
+            font-size: 16px;
+            text-align: center;
+            margin-top:80px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+  footer{
+   
+        .contact-grid-container{
+    
+            font-family: $nunito;
+            font-size: 20px;    
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-gap: 95px;
+    
+            a{
+                text-decoration: none;
+                color: $grey;
+            }
+        }
+        
+        .logo{
+            justify-self: center;
+            align-self: center;
+        }
+    
+        .copyright{
+            transform: translate(0%,120%); /* Center the text precisely */
+        }
+    
+    }    
+}
