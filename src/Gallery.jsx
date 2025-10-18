@@ -1,6 +1,6 @@
 
 import Masonry from 'react-masonry-css'
-import  {aevaFitness, autotrace, connexionEnterprise, inmMockup, neoTokyo, neonHorizon, userProfileAppUI, courtShotTalk, beautyintheBeholder, smartUI} from './assets/gallery-assets/gallery-assets'
+import  {autotrace, connexionEnterprise, inmMockup, neoTokyo, neonHorizon, userProfileAppUI, courtShotTalk, beautyintheBeholder, smartUI} from './assets/gallery-assets/gallery-assets'
 
 import GalleryHead from './components/SEO/GalleryHead'
 
@@ -54,10 +54,10 @@ export default function Gallery(){
                 </div>
 
 
-                <div className="grid-item">
+                {/* <div className="grid-item">
                     <img src= {aevaFitness} alt="Aeva fitness app mockup" />
                     <figure>AEVA FITNESS - App Mockup</figure>
-                </div>
+                </div> */}
 
                 <div className="grid-item">
                     <img src= {autotrace} alt="Autotrace website redesign" />
