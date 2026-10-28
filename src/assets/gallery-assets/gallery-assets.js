@@ -8,5 +8,6 @@ import userProfileAppUI from '../gallery-assets/userProfileAppUI.png'
 import courtShotTalk from '../gallery-assets/courtShotTalk.png'
 import beautyintheBeholder from '../gallery-assets/beautyintheBeholder.jpg'
 import smartUI from '../gallery-assets/smartui.gif'
+import buttonAnimation from '../gallery-assets/buttonAnimation.mp4'
 
-export {autotrace, connexionEnterprise, inmMockup, neoTokyo, neonHorizon, userProfileAppUI, courtShotTalk, beautyintheBeholder, smartUI};
+export {autotrace, connexionEnterprise, inmMockup, neoTokyo, neonHorizon, userProfileAppUI, courtShotTalk, beautyintheBeholder, smartUI, buttonAnimation};

@@ -1,6 +1,6 @@
 // import linkedinHomepg from './assets/homepg-linkedinlearning.png';
+import buildstrongHomepg from './assets/homepg-buildstrong.mp4';
 import linkedinHomepg from './assets/homepg-linkedinlearning.png';
-
 import mymoriHomepg from './assets/homepg-myMori.gif';
 import flowspaceHomepg from './assets/homepg-flowspace.gif';
 import tacohavenHomepg from './assets/homepg-tacohaven.gif';
@@ -12,7 +12,19 @@ import inmHomepg from './assets/homepg-inm.gif';
 
 export const projectCard = [
     {
+    id: 0,
+    mediaType : "video",
+    image : buildstrongHomepg,
+    alt: "BuildStrong Card Image",
+    title: "BUILDSTRONG",
+    description : "Manage and lead the project to improve user engagement and make UI changes",
+    path: "/buildstrong",
+    size: "large",
+    },
+
+    {
     id: 1,
+    mediaType : "image",
     image : linkedinHomepg,
     alt: "Linkedin Project Card Image ",
     title : "LINKEDINLEARNING",
@@ -23,6 +35,7 @@ export const projectCard = [
 
     {
     id: 2,
+    mediaType : "image",
     image : inmHomepg,
     alt: "INM Project Card Image", 
     title : "INM",
@@ -35,6 +48,7 @@ export const projectCard = [
 
     {
     id: 3,
+    mediaType : "image",
     image : mymoriHomepg,
     alt: "MyMori Project Card Image", 
     title : "MYMORI",
@@ -46,6 +60,7 @@ export const projectCard = [
 
     {
     id: 4,
+    mediaType : "image",
     image : flowspaceHomepg,
     alt: "Flowspace Project Card Image", 
     title : "FLOW SPACE",
@@ -55,14 +70,15 @@ export const projectCard = [
     size : "small",
     }, 
     
-    {
-    id: 5,
-    image : tacohavenHomepg,
-    alt: "Tacohaven Project Card Image", 
-    title : "TACO HAVEN",
-    description : "Crafted a landing page, emphasizing design principles" ,
-    // tags : ["Web Design", "Development", "Brand Identity"],
-    path: "/tacohaven",
-    size : "small",
-    }, 
+    // {
+    // id: 5,
+    // mediaType : "image",
+    // image : tacohavenHomepg,
+    // alt: "Tacohaven Project Card Image", 
+    // title : "TACO HAVEN",
+    // description : "Crafted a landing page, emphasizing design principles" ,
+    // // tags : ["Web Design", "Development", "Brand Identity"],
+    // path: "/tacohaven",
+    // size : "small",
+    // }, 
 ]

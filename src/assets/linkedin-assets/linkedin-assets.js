@@ -1,5 +1,3 @@
-// CENTRALIZED IMPORTS FOR ICONS TO BE USED
-
 import linkedinWireframe from './linkedin-ai-wireframe.png';
 import linkedinMockup from './Linkedin-ai-mockup.png';
 import linkedinVideoWireframe from './Linkedin-video-wireframe.png';

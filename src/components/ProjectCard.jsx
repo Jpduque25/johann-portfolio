@@ -1,11 +1,41 @@
+import gsap from "gsap";
+import {useGSAP} from '@gsap/react';
+import ScrollTrigger from "gsap/ScrollTrigger.js";
 
+import { useEffect, useRef } from "react";
 import ProjectOverview from "../projectoverview";
 
 
+
 export default function ProjectCard({project}){
+
+
+    gsap.registerPlugin(ScrollTrigger);
+    const cardEl = useRef();
+
+    useGSAP( () => {
+        gsap.fromTo (
+            cardEl.current, {
+                y:250, opacity:0
+            },
+            
+            {
+                y:0, 
+                opacity:1, 
+                duration: 0.8, 
+                ease: "power2.out",
+                scrollTrigger: { trigger: cardEl.current , start: "top 80%" }
+
+            }
+        )
+
+    });
+
+
+
     return(
         <>
-            <section className = "project-intro">
+            <section ref = {cardEl} className = "project-intro">
                 <div className="content">
 
                     <div className ="context">

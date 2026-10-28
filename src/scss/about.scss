@@ -1,6 +1,5 @@
 @use 'style' as *;
 
-
 // ---------------------------About Page-------------------------------
 .myprofile{
 
@@ -36,9 +35,10 @@
 
         
         .bio-item img {
-            border-radius: 20px;
+            border-radius: 250px;
         }
     }
+
 
 
     .skills{
@@ -50,10 +50,12 @@
         ul{
             list-style-type: none;
             margin-left: 0px;
+
+         
         }
+        
     }
 
- 
 
     .credentials, .education, .certificates{
         
@@ -139,13 +141,20 @@
 
 
         .credentials, .education, .certificates{
+        
             .row{
+                background-color: $white;
+                padding: 2rem;
+                border-radius: 20px;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+                
                 h4{
                     margin-bottom: 10px;
                 }
                 
                 grid-template-columns: 1fr;
-                margin-bottom: 80px;
+                margin-bottom: 20px;
                 grid-gap: 0px;
             }
         
@@ -158,10 +167,6 @@
         .grid{
             grid-template-columns: 1fr;
             gap: 32px;
-
-            // .contact-info.left{
-            //     display: none;
-            // }
 
             .left{
                 margin-bottom: 32px;
@@ -235,7 +240,6 @@
             }
             
         }
-
     }
 }
 

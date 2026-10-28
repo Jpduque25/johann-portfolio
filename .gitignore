@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# macOS resource forks
+._*
+
+# Too large for GitHub (>100MB)
+src/assets/gallery-assets/Japan-Vlog.mp4
+src/assets/buildstrong-assets/BuildStrong-promo-video.mp4

@@ -1,4 +1,21 @@
 // import scss files
+
+
+// CHANGES: 
+
+// DESKTOP 
+// 240px margin between .content
+// 180px between inner divs 
+// text center - 320 px
+// assets container - 220px
+
+// MOBILE
+// 
+
+
+// Apply these changes throughout portfolio
+
+
 @use 'animate' as *;
 
 // Google fonts
@@ -25,6 +42,10 @@ h4{
 
 h5{
     font-family: $inter;
+}
+
+ul{
+    margin: 0;
 }
 
 // GENERAL STYLING
@@ -62,12 +83,142 @@ body{
     }
 }
 
+
+.container{
+    // GRID LAYOUT FOR PORTFOLIO - INSERT THIS TO STYLE.SCSS AS IT IS A GLOBAL STYLE LATER
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .item.left{
+        grid-column: 1/13;
+    }
+
+    .item.right{
+        grid-column: 1/13;
+    }
+
+    .item.center{
+        grid-column: 1/13;
+    }
+
+
+    .assetsContainer{
+        grid-column: 1/13;
+
+        .imageContainer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #F6F6F6;
+            border: 1px solid #E1E1E1;
+            border-radius: 20px;
+        }
+    }
+
+
+    .assetsContainer.two-column{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+
+        .left {
+            grid-column: 1 / 7;
+        }
+
+        .right {
+            grid-column: 7 / 13;
+        }
+
+        .center {
+            grid-column: 1 / 13;
+        }
+
+        .imageContainer {
+            display: flex;
+            grid-template-columns: repeat(12, 1fr);
+            grid-column: 1 / 13;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #F6F6F6;
+            border: 1px solid #E1E1E1;
+            border-radius: 20px;
+            }
+
+            .assets {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            }
+
+            .article {
+            grid-column: span 12;
+            }
+            
+        }
+    }
+
+
+.container-card{
+    .card-bg{
+        background-color: $white;
+        margin-bottom: 20px;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+
+        
+    }
+
+
+    & .card-bg.first{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    & .card-bg.fourth{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+
+ .text-card{
+        display:grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+
+        .card-top{
+        grid-column: 1/13;
+
+        }
+
+        .card-bottom{
+        grid-column: 1/13;
+
+        }
+
+
+        .card-sm{
+            background-color: $white;
+            padding: 14px 25px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        & .card-sm.first, .card-sm.third{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        & .card-sm.second, .card-sm.fourth{
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+    }
+
+
 // ---------------------------External Styling-------------------------------
 .card-bold{
     font-family: $inter;
     font-weight:bold;
     font-size: 20px;
-    margin-bottom: 20px;
 }
 
 .card-text{
@@ -115,10 +266,72 @@ body{
 
 }
 
+.list-circle {
+        width: 60px; 
+        height: 60px; 
+        border-radius: 50%; 
+        background-color: $white; 
+        color: $grey; 
+        font-family: $kaneda-gothic;
+        font-size: 35px;
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.goal{
+    ul {
+        list-style: none;
+    }
+
+    li {
+        position: relative; 
+        padding-left: 80px; 
+    }
+}
+
+
+.user-problem{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+
+    h4{
+        margin:20px auto;
+    }
+}
+
+
 // --------------------------- Responsiveness -------------------------------
 
 @media screen and (min-width: 320px ) {
- 
+
+    .container{
+
+     .assetsContainer.two-column{
+        
+        .left {
+            grid-column: 1 / 13;
+        }
+
+        .right {
+            grid-column: 1/13;
+        }
+      }
+    }
+
+
+      
+    .user-problem{
+        h4{
+            font-size: 20px;
+        }
+    }
 
     h1{
         font-size: 3.125rem;
@@ -151,8 +364,8 @@ body{
         margin: 80px auto;
     }
 
-    .divider{
-        margin-bottom: 32px;
+    .card-bg{
+        padding:23px 19px;         
     }
 
     // navigation
@@ -220,17 +433,54 @@ body{
 @media screen and (min-width: 768px) {
 
 
+    .container{
+
+         .item.left{
+        grid-column: 1/7;
+        }
+
+        .item.right{
+            grid-column: 8/13;
+            grid-row: 2;
+        }
+
+
+        .item.center{
+            grid-column: 3/11;
+        }
+
+    }
+
+    .user-problem{
+        width: 100%;
+
+        h4{
+            font-size: 26px;
+        }
+    }
+
+    .card-bg{
+        padding: 30px 30px;
+    }
+
      .content{
          max-width: 42.5rem;
-         margin: 120px auto;
+
+        //  BOTTOM MARGIN CHANGE HERE 
+         margin: 280px auto;
      }
 
-     .divider{
-         margin-bottom:50px;
-     }
+    .text-card{
+        .card-top{
+            grid-column: 1/7;
+            
+        }
 
-
-   
+        .card-bottom{
+            grid-column: 7/13;
+        }
+        
+    }
 
     h1{
         font-size: 9rem;
@@ -239,18 +489,18 @@ body{
     
     h2{
         font-size: 3rem;
-        margin-bottom: 50px;
+        margin-bottom: 48px;
     }
     
     h3{
         font-size: 2.188rem;
-        margin-bottom: 50px;
+        margin-bottom: 48px;
     }
     
     h4{
         font-weight: 700;
         font-size: 1.625rem;
-        margin-bottom:10px;
+        margin-bottom: 12px;
     }
     
    
@@ -264,12 +514,42 @@ body{
     body{
         font-size: 20px; 
     }
+
+    .item.center{
+        margin-top: 180px;
+    }
+
 }
 
 @media screen and (min-width: 1024px ){
     .content{
         max-width: 57.5rem;
     }
+
+    .container{
+
+        .item.left{
+            grid-column: 1/8;
+        }
+
+        .item.right{
+            grid-column: 9/13;
+            grid-row: 2;
+        }
+
+        .assetsContainer.two-column{
+            
+            .left {
+                grid-column: 1 / 7;
+            }
+
+            .right {
+                grid-column: 7/13;
+            }
+        }
+
+    }
+    
 }
 
 
@@ -278,5 +558,3 @@ body{
         max-width: 85rem;
     }
 }
-
-

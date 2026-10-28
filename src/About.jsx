@@ -3,20 +3,94 @@ import image1 from './assets/image1.png';
 import image2 from './assets/image2.png';
 import image3 from './assets/image3.png';
 import AboutHead from './components/SEO/AboutHead';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 
 
 export default function AboutMe(){
+
+    gsap.registerPlugin(ScrollTrigger);
+    const skillsRef = useRef();
+    const credsRef = useRef();
+
+    // useGSAP(()=>{
+    //     gsap.from(
+    //         ".listItem" ,{
+    //             opacity: 0,
+    //             stagger: 0.15,
+    //             ease: "power2.inOut"
+    //         }
+    //     )
+    // }, {scope: container});
+
+ 
+useGSAP(() => {
+  const columns = gsap.utils.toArray("ul", skillsRef.current);
+
+  // Collect all skillItems per column
+  const lists = columns.map(col =>
+    Array.from(col.querySelectorAll(".skillItem"))
+  );
+
+  // Find longest column
+  const maxRows = Math.max(...lists.map(list => list.length));
+
+  const ordered = [];
+
+  // Build row-by-row order
+  for (let row = 0; row < maxRows; row++) {
+    for (let col = 0; col < lists.length; col++) {
+      if (lists[col][row]) {
+        ordered.push(lists[col][row]);
+      }
+    }
+  }
+
+  // Animate in row order
+  gsap.from(ordered, {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: "power2.out",
+    stagger: 0.08,
+    scrollTrigger: { trigger: ordered, start: "top 80%" }
+  });
+
+
+    gsap.utils.toArray(".card").forEach((card) => {
+    gsap.fromTo(
+        card,
+        { opacity: 0 },
+        {
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            once: true
+        }
+        }
+    );
+    });
+
+}, { scope: skillsRef });
+
+
     return(
         <>
         <AboutHead/>
-        <main class = "aboutpg">
+        <main ref={skillsRef} className = "aboutpg">
 
-            <section class = "myprofile">
+            <section className = "myprofile">
 
 
-                <div class="content">
+                <div className="content">
 
-                    <div class="main-header">
+                    <div className="main-header">
                     
                         {/* <div class="first">
                             <h1>LEARNING THROUGH ITERATION TO CRAFT INSIGHTFUL EXPERIENCES</h1>
@@ -27,14 +101,14 @@ export default function AboutMe(){
                         </div> */}
                     </div>
             
-                    <div class="bio">
-                        <div class="bio-item">
+                    <div className="bio">
+                        <div className="bio-item">
                             <img src= {mypfp} className = "image" alt="Johann's profile picture" />
                        
                         </div>
 
-                        <div class="bio-item">
-                            <h2>UX DESIGNER LOCATED IN VANCOUVER, B.C</h2>
+                        <div className ="bio-item">
+                            <h2>PRODUCT DESIGNER LOCATED IN VANCOUVER, B.C</h2>
                             <p>Design to me is designing with intent as I want to push barriers and explore unconventional approaches in creating digital products and services. By balancing functionality and aesthetics, I aim to deliver experiences that are unique and meaningful in the digital space. </p>
                         </div>
                     </div>
@@ -42,52 +116,55 @@ export default function AboutMe(){
 
                 </div>
 
-                <div class="content">
+                <div className ="content">
                     <hr/>
                 </div>
 
-                <div class="content">
+                <div className="content">
 
-                    <div class="skills">
-                        <div class="column-one">
+                    <div className ="skills">
+                        <div className ="column-one">
                             <h3>SOFTWARE</h3>
                             <ul>
-                                <li>Figma</li>
-                                <li>Adobe Creative Suite</li>
-                                <li>Wordpress</li>
-                                <li>Webflow</li>
-                                <li>Framer</li>
-                                <li>Blender</li>
-                                <li>Spline</li>
+                                <li className='skillItem'>Figma</li>
+                                <li className='skillItem'>Adobe Creative Suite</li>
+                                <li className='skillItem'>Wordpress</li>
+                                <li className='skillItem'>Webflow</li>
+                                <li className='skillItem'>Framer</li>
+                                <li className='skillItem'>Blender</li>
+                                <li className='skillItem'>Spline</li>
+                                <li className='skillItem'>Canva</li>
+                                <li className='skillItem'>Jira</li>
+
                             </ul>
                         </div>
                         
-                        <div class="column-two">
+                        <div  className ="column-two">
                             <h3>KEY SKILLS</h3>
                             <ul>
-                                <li>UX/UI Design</li>
-                                <li>User Research</li>
-                                <li>Branding & Identity</li>
-                                <li>Design Systems</li>
-                                <li>Wireframing</li>
-                                <li>Prototyping</li>
-                                <li>Design Thinking</li>
-                                <li>Visual Design</li>
-                                <li>Information Architecture</li>
+                                <li className='skillItem'>UX/UI Design</li>
+                               <li className='skillItem'>User Research</li>
+                                <li className='skillItem'>Branding & Identity</li>
+                                <li className='skillItem'>Design Systems</li>
+                                <li className='skillItem'>Wireframing</li>
+                                <li className='skillItem'>Prototyping</li>
+                                <li className='skillItem'>Design Thinking</li>
+                                <li className='skillItem'>Visual Design</li>
+                                <li className='skillItem'>Information Architecture</li>
                             </ul>
                         </div>
                         
-                        <div class="column-three">
+                        <div className ="column-three">
                             <h3>DEVELOPMENT TOOLS</h3>
                             <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                                <li>React</li>
-                                <li>Python</li>
-                                <li>PHP</li>
-                                <li>JQuery</li>
-                                <li>Github</li>
+                                <li className='skillItem'>HTML</li>
+                                <li className='skillItem'>CSS</li>
+                                <li className='skillItem'>Javascript</li>
+                                <li className='skillItem'>React</li>
+                                <li className='skillItem'>Python</li>
+                                <li className='skillItem'>PHP</li>
+                                <li className='skillItem'>JQuery</li>
+                                <li className='skillItem'>Github</li>
                             </ul>
                         </div>
                         
@@ -96,103 +173,70 @@ export default function AboutMe(){
                 </div>
 
 
-                <div class="content">
+                <div className="content">
                     <hr/>
                 </div>
 
-                <div class="content">
-                    <div class="credentials">
+                <div className="content">
+                    <div className="credentials"> 
+                        
                         <h5>Experiences</h5>
 
-                         <div class="row">
-                            <div class="column">
-                                <h2>LIFEGUARD DIGITAL HEALTH</h2>
-                            </div>
-        
-                            <div class="column">
-                                <h4>Product Designer</h4>
-                                <p>Redesigned a mobile application to enhance user experience while aligning with the visual identity of the company's flagship product.</p>
-                            </div>
+                         <div className="row card ">
+                            <h2>LIFEGUARD DIGITAL HEALTH</h2>
+    
+                            <h4>Product Designer</h4>
+                            <p>Redesigned a mobile application to enhance user experience while aligning with the visual identity of the company's flagship product.</p>
                         </div>
                         
-                        <div class="row">
-                            <div class="column">
-                                <h2>HALETALE</h2>
-                            </div>
+                        <div className="row mt-xxl card">
+                            <h2>HALETALE</h2>
+    
+                            <h4>Web Designer</h4>
+                            <p>Designed a booking form website using CRM tools to streamline the booking process and connect potential clients.</p>
+                        </div>
+
+                        <div className="row mt-xxl card">
+                            <h2>PASHMOTORS</h2>
         
-                            <div class="column">
-                                <h4>UX/UI Design Intern</h4>
-                                <p>Designed a booking form website using CRM tools to streamline the booking process and connect potential clients.</p>
-                            </div>
+                            <h4>UX/UI Design Intern</h4>
+                            <p>Created a roadmap and implement redesign changes to enhance the current web application on all platforms.</p>
                         </div>
 
-                        <div class="row">
-                            <div class="column">
-                                <h2>Pashmotors</h2>
-                            </div>
-        
-                            <div class="column">
-                                <h4>UX/UI Design Intern</h4>
-                                <p>Created a roadmap and implement redesign changes to enhance the current web application on all platforms.</p>
-                            </div>
-
+                        <div className="row mt-xxl card">
+                            <h2>WaffleHacks 2023 by Major League Hacking</h2>
+    
+                            <h4>Hackathon Challenge</h4>
+                            <p></p>
                         </div>
 
-                        <div class="row third">
-                            <div class="column">
-                                <h2>WaffleHacks 2023 by Major League Hacking</h2>
-                            </div>
-                        </div>
-                    </div>
+                        <div className="education mt-content card">
+                            <h5>Education</h5>
 
-                </div>
-
-                <div class="content">
-                    <div class="education">
-                        <h5>Education</h5>
-
-                        <div class="row">
-                            <div class="column">
+                            <div className="row">
                                 <h2>BCIT</h2>
+
+                                <h4>New Media Design & Web Development</h4>
                             </div>
-                            <div class="column">    
-                                <p>New Media Design & Web Development</p>
+                        </div>
+
+
+                        <div className="certificates mt-content card">
+                            <h5>Certificates</h5>
+
+                            <div className="row">
+                                <h2>GOOGLE</h2>
+
+                                <h4>UX Design Professional Certificate</h4>
                             </div>
                         </div>
 
-                        {/* <!-- <div class="row">
-                            <div class="column">
-                                <h2>Simon Fraser University</h2>
-                            </div>
-                            <div class="column">    
-                                <p>Bachelor of Arts in Economics & Minor in Business</p>
-                            </div>
-                        </div> --> */}
-                    </div>
-                </div>
-
-
-
-                <div class="content">
-                    <div class="certificates">
-                        <h5>Certificates</h5>
-
-                        <div class="row">
-                            <div class="column">
-                                <h2>UX Design Professional Certificate - Google</h2>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
 
-
-                <div class="content">
-                    <hr/>    
-                </div>
-            
             </section>
-
+{/* 
             <section class = "personaldetails">
 
                 <div class="content">
@@ -229,34 +273,7 @@ export default function AboutMe(){
                                 <img src= {image3} className = "image"  alt="my-picture3" />
                             </div>
 
-                            {/* <div class="column-right">
-                                <div class="contact-info right">  
-                                    <h2>GET IN TOUCH WITH ME</h2>
-
-                                    <div class="email">
-                                        <a href="mailto:jpduque25@gmail.com">
-                                            <p>Send an email</p>
-                                        </a>
-                                    </div>
-        
-                
-                                    <div class="social-icons">
-        
-                                        <a href="https://www.instagram.com/johann.duque" target="_blank">
-                                            <div class = "instagram">
-                                                <i class="fa-brands fa-instagram fa-xl"></i>
-                                            </div>
-                                        </a>
-                                    
-                                        <a href="http://www.linkedin.com/in/johann-duque" target="_blank">
-                                            <div class="linkedin">
-                                                <i class="fa-brands fa-linkedin-in fa-lg"></i>
-                                            </div>
-                                        </a>
-                
-                                    </div>
-                                </div>
-                            </div> */}
+                           j
         
                         </div>
                     
@@ -266,7 +283,7 @@ export default function AboutMe(){
                 </div>
             
 
-            </section>
+            </section> */}
         </main>
     {/* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <script src="js/main.js"></script> */}

@@ -1,0 +1,35 @@
+// Spacing used for layouts, components, divs, etc. 
+@use 'style' as *;
+
+$space : (
+    0: 0,
+    sm: 12px,
+    md: 20px,
+    lg: 32px,
+    xl: 48px,
+    xxl: 60px,
+
+    content: 160px,
+    section: 240px,
+    textCenter: 320px, 
+
+  
+);
+
+
+@each $key, $value in $space {
+
+  /* margin */
+  .m-#{$key}  { margin: $value; }
+  .mt-#{$key} { margin-top: $value; }
+  .mr-#{$key} { margin-right: $value; }
+  .mb-#{$key} { margin-bottom: $value; }
+  .ml-#{$key} { margin-left: $value; }
+
+  /* padding */
+  .p-#{$key}  { padding: $value; }
+  .pt-#{$key} { padding-top: $value; }
+  .pr-#{$key} { padding-right: $value; }
+  .pb-#{$key} { padding-bottom: $value; }
+  .pl-#{$key} { padding-left: $value; }
+}

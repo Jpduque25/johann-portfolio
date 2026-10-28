@@ -6,11 +6,26 @@ import { jsIcon } from "./assets/icons/icons.js";
 // import { cssIcon } from "./assets/icons/icons.js";
 import { reactIcon } from "./assets/icons/icons.js";
 
-
 // Create an object containing different projects and details
 const ProjectOverview = [
     {
         id : 1,
+        title : "BuildStrong",
+        timeline : "12 months", 
+        disciplines: "Product Design, Graphic Design, Digital Marketing",
+        tools: [figmaIcon],
+        collaborators : ["CEO", "Project Manager","Software Engineer", "Subject Matter Experts"],
+        description : "BuildStrong is a mental health and substance use application designed specifically for the construction and trades industry — a sector historically underserved by mental health resources. Developed in 2021 by Lifeguard in partnership with CIRP, the industry's leading experts, the app connects workers with support tools, resources, and educational content. In 2025, I joined the project with the objective of addressing a decline in user engagement since launch. This involved conducting user research, evaluating UX processes, and strategizing and launching marketing initiatives to expand the app's reach beyond its original union worker audience to workers across all trades.",
+
+        
+        url : [{name: "VIEW PROJECT" , url: "https://lifeguarddh.com/products/buildstrong/"}]
+
+
+    }
+    ,
+
+    {
+        id : 2,
         title : "LinkedinLearning",
         timeline : "8 Weeks",
         disciplines: "UX Design",
@@ -21,7 +36,7 @@ const ProjectOverview = [
     },
 
      {   
-        id : 2,
+        id : 3,
         title : "Institute of New Media",
         timeline : "4 Weeks",
         disciplines: "UX Design",
@@ -31,7 +46,7 @@ const ProjectOverview = [
     },
 
     {
-        id : 3,
+        id : 4,
         title : "MyMori",
         timeline : "2 Days",
         disciplines: "UX Design",
@@ -43,24 +58,24 @@ const ProjectOverview = [
     },
 
     {
-        id : 4,
+        id : 5,
         title : "Flow Space",
         timeline : "9 Weeks",
         disciplines: "Front-end Web Development",
         tools: [reactIcon, jsIcon, sassIcon],
         description : "Flow app is an interactive web application with the intent of increasing productivity by utilizing time tracking methods. As this is my first React app, the purpose of this project is to showcase my proficency in using React JS to make a comprehensive focus app.",
-        url : [{name : "VIEW SITE" , url :"https://flowspace.johannduque.com/"} , { name : "GITHUB", url: "https://github.com/Jpduque25/flowspace.git"}]
+        url : [{name : "VIEW SITE" , url :"https://flowspace.jpduque.com/"} , { name : "GITHUB", url: "https://github.com/Jpduque25/flowspace.git"}]
 
     },
 
     {
-        id : 5,
+        id : 6,
         title : "TacoHaven",
         timeline : "2 Weeks",
         disciplines: "Front-End Web Development",
         tools: [htmlIcon, sassIcon, bootstrapIcon, jsIcon, figmaIcon],
         description : "The purpose of this project was to explore my skills as a designer and web developer, utilizing industry tools to accomplish this project. Tackling this project as if I was working for a client, the main challenge was how to establish brand-identity and create a site that promotes the restaurants food and services.",
-        url : [{name: "VIEW SITE" , url: "http://tacohaven.johannduque.com/"}]
+        url : [{name: "VIEW SITE" , url: "http://tacohaven.jpduque.com/"}]
 
     },
 

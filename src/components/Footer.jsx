@@ -31,8 +31,7 @@ export default function Footer(){
                         <div>
                             <h3>CONTACT</h3>
                             <ul>
-                                <li><a className="resume" href="https://drive.google.com/file/d/1QkUTMXW7zp5XXZBzme0OLe3EdN83GpZp/view?usp=sharing" target="_blank">Resume</a></li>                  
-                      
+                                <li><a className="resume" href="https://drive.google.com/file/d/1UaJ-T5fUWSZ17CpbSFC0lvIAyLrydf9r/view" target="_blank">Resume</a></li>                  
                                 <li><a href="mailto:jpduque25@gmail.com" target="_blank">Jpduque25@gmail.com</a></li>
                             </ul>
                         </div>

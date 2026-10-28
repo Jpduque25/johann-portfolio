@@ -1,35 +1,9 @@
 @use 'style' as *;
 
-.flex{
-    display: flex;
-}
-
 
 ul{
-    margin-left: 20px;
+    list-style-type: none;
+    // margin-left: 20px;
 }
 
 
-
-@media screen and (min-width: 320px){
-    .flex{
-        flex-direction: column;
-        margin-bottom: 32px;
-    }
-}
-
-
-@media screen and (min-width: 1024px){
-  .flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 50px;
-   
-
-    .column{
-        flex: 1;
-    }
-}
-
-}

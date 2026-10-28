@@ -10,7 +10,7 @@ import MymoriHead from './components/SEO/MymoriHead.jsx';
 
 export default function MyMori(){
 
-  const selectProject = ProjectOverview[2];
+  const selectProject = ProjectOverview[3];
 
   return (
 
@@ -25,127 +25,168 @@ export default function MyMori(){
         <section className="mymori-writeup">
 
             <div className ="content">
-                <h2>01 THE GOAL</h2>
+                <div className="goal">
 
-                <ul>
-                    <li><span className = "circle">1</span>
-                        <div className ="list-item">
-                            Designing an application that empowers people who are struggling with social anxiety by giving them a platform for them to interact and express themselves. 
-                        </div>
-                    </li>
+              
+                    <h2>01 THE GOAL</h2>
 
-                    <li><span className ="circle">2</span>
-                        <div className ="list-item">
-                            Create an immersive 2D space where users are empowered to express themselves while also incentivizing them to spend more time within the digital space.
-                        </div>
-                    </li>
+                    <ul>
 
-                    <li><span className ="circle">3</span>
-                        <div className ="list-item">
-                            Develop a feature to enable users to log and track journal entries, facilitating reflection on their previous experiences.
-                        </div>
-                    </li>
+                        <li className = "mb-xl listItem"><span className = "list-circle">1</span>
+                            <div >
+                                Designing an application that empowers people who are struggling with social anxiety by giving them a platform for them to interact and express themselves.  
+                            </div>
+                        </li>
 
-                    <li>
-                        <span className ="circle">4</span>
-                        <div className ="list-item">
-                            Utilize AI generated assets within the mobile application. 
-                        </div>
-                    </li>
-                </ul>
+                        <li className = "mb-xl listItem"><span className = "list-circle">2</span>
+                            <div >
+                                Create an immersive 2D space where users are empowered to express themselves while also incentivizing them to spend more time within the digital space.
+                            </div>
+                        </li>
+
+                        <li className = "mb-xl listItem"><span className = "list-circle">3</span>
+                            <div >
+                                Develop a feature to enable users to log and track journal entries, facilitating reflection on their previous experiences.
+                            </div>
+                        </li>
+
+                        <li className = "mb-xl listItem"><span className = "list-circle">4</span>
+                            <div>
+                                Utilize AI generated assets within the mobile application.
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
               
             </div>
 
 
             <div className ="content">
-                <div className ="benefits">
+                <div className ="container">
+                    <div className="item center center-text">
                         <h4>Who benefits using this application?</h4>
                         <p>While we want to embrace a large audience that enjoy gamified experiences in an immersive world, we want to ensure the main function is to serve those that struggle with expressing themselves and have dealt with social anxiety.</p>
+                    </div>
                 </div>
             </div>
 
             <div className ="content">
-                <div className ="user-needs">
-                    <div className ="divider">
-                        <h4>How can their needs be met?</h4>
-                        <p>The virtual forest is a safe and secure place for users to share their thoughts and feelings. Their input can make an impact in the digital space as the forest, the animals living in it, and the ecosystem begin to change into an abundant and rich forest. </p>
+                
+                    <div className = "container">
+                        <div className="item left">
+                            <h4>How can their needs be met?</h4>
+                            <p>The virtual forest is a safe and secure place for users to share their thoughts and feelings. Their input can make an impact in the digital space as the forest, the animals living in it, and the ecosystem begin to change into an abundant and rich forest. </p>
+                        </div>
+                        
+                        <div className="item right">  
+                            <img src = {virtualForest} className = "image" alt = "virtual forest" />
+                        </div>
+
                     </div>
-
-                    <img src = {virtualForest} className = "image" alt = "virtual forest" />
-
-                </div>
             </div>
                 
             <div className ="statement-bar">
-                <h5>PROBLEM STATEMENT</h5>
+                <div className="center-text">
+                    <h5>PROBLEM STATEMENT</h5>
                 <h4>How can we create an application that incentivizes users to express their personal thoughts?</h4>
-            </div>
 
-            <div className ="content">
-                <div className ="divider">
-                    <h2>02 DESIGN PROCESS</h2>
-
-
-                    <h4>Incorporate AI tools to generate unique assets</h4>
-
-                    <p>We use Stable Diffusion AI to generate unique assets such as the cosmetics, animals, and ecosystem.  </p>
-                    <p>Diary trees will have a unique appearance generated by AI tools.</p>
                 </div>
                 
-                
-                <div class="article">
-                  <img src = {assetGallery} className = "image" alt = "asset gallery" />
-                  <span>Assets used for MyMori</span>
-                </div>
-
             </div>
 
             <div className ="content">
-                <div className ="divider">
-                    <h4>Self-expression in a safe and secure diary</h4>
-                    <p>Users can express themselves by selecting an emotion that relates to them during that day, as they log their experiences into the diary. </p>
-                    <br/>
-                    <p>As the ecosystem grows, users receive daily encouragements based on the emotions they have selected when writing in their diary.  </p>
+                <h2>02 DESIGN PROCESS</h2>
+
+                <div className ="container">
+                    <div className="item left"><h4>Incorporate AI tools to generate unique assets</h4></div>
+
+                    <div className="item right">
+                        <ul>
+                            <li className = "mb-md">We use Stable Diffusion AI to generate unique assets such as the cosmetics, animals, and ecosystem. </li>
+                            <li>Diary trees will have a unique appearance generated by AI tools.</li>
+                        </ul>
+
+                    </div>
+
+                    <div className="assetsContainer mt-content">
+                        <div class="article">
+                            <img src = {assetGallery} className = "image" alt = "asset gallery" />
+                            <span>Assets used for MyMori</span>
+                        </div>
+                    </div>
+                     
                 </div>
-
-                <video className="video" src={video1} autoPlay loop muted />
-
-
-            </div>
-
-            <div className ="content">
-                <div className ="divider">
-                    <h4>An interactive and engaging digital space that rewards expression </h4>
-                    <p>Users earn seed points when they share their thoughts with the diary tree every day.  These points can be used to purchase in-game cosmetic skins such as furniture, animals, ponds, trees, and more. </p>
-                    <br/>
-                    <p>Over time, users will see changes in the ecosystem and the impact their thoughts make on their plot of land. </p>
-                </div>
-
-                <video className="video"  src={video2} autoPlay loop muted/>
-              
                 
             </div>
 
             <div className ="content">
-                <h3>STYLEGUIDE</h3>
-     
-                <div className="divider">
-                  <img src = {styleGuide} className = "image" alt = "styleguide"/>
+                <div className ="container">
+
+                    <div className="item left">
+                        <h4>Self-expression in a safe and secure diary</h4>
+                    </div>
+
+                    <div className="item right">
+                        <ul>
+                            <li className = "mb-md">Users can express themselves by selecting an emotion that relates to them during that day, as they log their experiences into the diary. </li>
+                            <li>As the ecosystem grows, users receive daily encouragements based on the emotions they have selected when writing in their diary. </li>
+                        </ul>
+                    </div>
+
+                    <div className="assetsContainer mt-content">
+                        <video className="video" src={video1} autoPlay loop muted />
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div className ="content">
+                <div className ="container">
+                    <div className="item left">
+                        <h4>An interactive and engaging digital space that rewards expression </h4>
+                    </div>
+                    <div className="item right">
+                        <ul>
+                            <li className = "mb-md">Users earn seed points when they share their thoughts with the diary tree every day.  These points can be used to purchase in-game cosmetic skins such as furniture, animals, ponds, trees, and more.</li>
+                            <li>Over time, users will see changes in the ecosystem and the impact their thoughts make on their plot of land.</li>
+
+                        </ul>
+                    </div>
+                    <div className="assetsContainer mt-content">
+                        <video className="video"  src={video2} autoPlay loop muted/>
+                    </div>
                 </div>
 
-                <p>Our styleguide incorporates aspects of calmness, relief, and comfort, all of which resonates with the topic our application solves. The selection of colors and icons reflects a connection to nature and the environment, creating an inviting app with a friendly vibe.
-                </p>
-              
             </div>
 
             <div className ="content">
-                <h3>PROCESS FLOWCHART</h3>
+
+                <div className="container">
+                    <div className="item left mb-xxl">
+                        <h4>Styleguide</h4>
+                        <p>Our styleguide incorporates aspects of calmness, relief, and comfort, all of which resonates with the topic our application solves. The selection of colors and icons reflects a connection to nature and the environment, creating an inviting app with a friendly vibe.</p>
+                    </div>
+
+                    <div className="item center">
+                        <img src = {styleGuide} className = "image" alt = "styleguide"/>
+                    </div>
+            
+                </div>
           
-                <div className="divider">
-                  <img src = {flowChart} className = "image" alt = "process flowchart"/>
-                </div>
+            </div>
 
-                <p>We created a process flow chart that indicates the users' journey when using MyMori. Once they complete the onboarding screen. they are given the task of creating, and viewing messages which are then logged into their personal diary for reflection.</p>
+            <div className ="content">
+                <div className="container">
+                    <div className="item left mb-xxl">
+                        <h4>Process Flowchart</h4>
+                         <p>We created a process flow chart that indicates the users' journey when using MyMori. Once they complete the onboarding screen. they are given the task of creating, and viewing messages which are then logged into their personal diary for reflection.</p>
+                    </div>
+                    <div className="item center">
+                        <img src = {flowChart} className = "image" alt = "process flowchart"/>
+                    </div>
+                </div>           
             </div>
 
 
@@ -162,16 +203,29 @@ export default function MyMori(){
 
             <div className ="content">
                 <h2>02 ROOM FOR IMPROVEMENT</h2>
-                <p>This being a 2-day hackathon project, I believe there is a lot of room for growth for MyMori. While the core mechanics of expression and sharing thoughts have been achieved, it would be an opportunity to consider social interaction with other players such as sharing anonymous messages with others and making a positive change in other user’s ecosystem. </p>
-                <br/>
-                <p>This would also be a good project using development tools due to the core mechanics, the use of databases to store diary entries, and the use of AI-generated art using an API.</p>
-                <br/>
-                <p>Implementing UX research to identify possible pain points and how we can improve the product could be addressed in the future. </p>
+
+                <div className="container">
+                    <div className="item left">
+                        <p className = "mb-md">This being a <b>2-day hackathon project</b>, I believe there is a lot of room for growth for MyMori. While the core mechanics of expression and sharing thoughts have been achieved, it would be an opportunity to consider social interaction with other players such as sharing anonymous messages with others and making a positive change in other user’s ecosystem. </p>
+            
+                        <p className = "mb-md">This would also be a good project using development tools due to the core mechanics, the use of databases to store diary entries, and the use of AI-generated art using an API.</p>
+
+                        <p>Implementing UX research to identify possible pain points and how we can improve the product could be addressed in the future. </p>
+                    </div>
+                </div>
+            
             </div>
 
             <div className ="content">
                 <h2>03 KEY TAKEAWAYS</h2>
-                <p>This 2-day experience was a great way to collaborate with my teammates, manage time-effectively, and challenge myself as a mobile designer. While there were times where we were experienced scope creep, we prioritized the purpose of the project and how the value proposition meets the needs of users in addition to incorporating gamified elements that make this game helpful and exciting. </p>
+                
+                <div className="container">
+                    <div className="item center center-text">
+                    <h4>This 2-day experience was a great way to collaborate with my teammates, manage time-effectively, and challenge myself as a mobile designer. While there were times where we were experienced scope creep, we prioritized the purpose of the project and how the value proposition meets the needs of users in addition to incorporating gamified elements that make this game helpful and exciting.</h4>
+                    </div>
+                </div>
+
+            
             </div>
             
             <BottomNavigation projectName={"FLOW SPACE"} link = "/flowspace"/>

@@ -41,7 +41,7 @@ export default function Home(){
                                     </div>
 
                                     <div className="tagline">
-                                        <p>I crafting digital experiences that that are grounded in empathy and driven by business insight.</p>
+                                        <p>I craft digital experiences that are grounded in empathy and driven by business insight.</p>
                                     </div>
 
                                 </div>
@@ -62,7 +62,7 @@ export default function Home(){
                                             <img src= {workIcon} alt="work" />
                                             <span>RECENT EXPERIENCE</span>
                                         </div>
-                                        <p>Product Designer @Lifeguard Digital Health</p>
+                                        <p>Currently a Product Designer @Lifeguard Digital Health</p>
                                     </div>
 
                                     <div className="media-block second">

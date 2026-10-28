@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <nav className = "site-header-menu">
 
-            <div className="container">
+            <div className="nav-container">
 
                 <div className="site-header-logo">
                     <Link to = "/"> <img src = {Logo} alt = "Logo"/></Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
                     <li><Link to = "/gallery">GALLERY</Link></li>
                     <li><Link to = "/about">ABOUT</Link></li>
                     
-                    <li><a className="resume" href="https://drive.google.com/file/d/1QkUTMXW7zp5XXZBzme0OLe3EdN83GpZp/view?usp=sharing" target="_blank">RESUME</a></li>
+                    <li><a className="resume" href="https://drive.google.com/file/d/1UaJ-T5fUWSZ17CpbSFC0lvIAyLrydf9r/view" target="_blank">RESUME</a></li>
                 </ul>
             </div>
 

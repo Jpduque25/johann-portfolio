@@ -48,7 +48,7 @@
 }
 
 @media screen and (min-width : 320px){
-    .container{
+    .nav-container{
         display: none;
     }
 
@@ -106,7 +106,7 @@
         display: none;
     }
 
-   .container {
+   .nav-container {
         display: flex;
         justify-content: space-between;
 
@@ -127,14 +127,14 @@
 
 
 @media screen and (min-width: 1024px){
-    .container{
+    .nav-container{
         max-width: 57.5rem;
     }
 }
 
 
 @media screen and (min-width: 1440px){
-    .container{
+    .nav-container{
             max-width: 85rem;
         margin: 0 auto;
     }

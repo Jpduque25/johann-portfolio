@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import arrowButton from  '../assets/home-assets/arrow-button.png';
 
 // Object destructuring to destructure first parameter
-export default function Card({alt, image, title, description, path, className}){
+export default function Card({alt, image, mediaType = "image", title, description, path, className}){
     const navigate = useNavigate();
 
     return(
@@ -11,9 +11,22 @@ export default function Card({alt, image, title, description, path, className}){
         <div className = {`card-component ${className}`}>
             <div  onClick = {() => navigate(path)} style = { {cursor: "pointer"}}>
 
+
                 <div className="project-image">
-                    <img src= {image} alt= {alt} />
+                    {mediaType === "video" ? (
+                        <video
+                        src={image}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        />
+                    ) : (
+                        <img src={image} alt={alt} />
+                    )}
                 </div>
+
+            
 
                 <div className="project-frame">
                     <div className="left">
