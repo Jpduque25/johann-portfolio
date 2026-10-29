@@ -29,7 +29,14 @@ $grey:#50566B;
 // TYPOGRAPHY 
 $kaneda-gothic : 'kaneda-gothic', sans-serif; 
 $nunito : 'Nunito', sans-serif;  
-$inter: 'Inter', sans-serif;  
+$inter: 'Inter', sans-serif;
+
+@mixin navigation-text{
+    font-family: $inter;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing:  1.25px;
+}  
 
 
 h1, h2, h3{
@@ -112,6 +119,7 @@ body{
             background-color: #F6F6F6;
             border: 1px solid #E1E1E1;
             border-radius: 20px;
+            overflow: hidden; // clip images to the rounded corners
         }
     }
 
@@ -142,6 +150,7 @@ body{
             background-color: #F6F6F6;
             border: 1px solid #E1E1E1;
             border-radius: 20px;
+            overflow: hidden; // clip images to the rounded corners
             }
 
             .assets {
@@ -290,8 +299,18 @@ body{
     }
 
     li {
-        position: relative; 
-        padding-left: 80px; 
+        position: relative;
+        padding-left: 80px;
+        // Center the text against the number circle
+        display: flex;
+        align-items: center;
+        min-height: 60px; // circle height, so one-line items still center on it
+    }
+
+    // Center the circle on the text when the text runs taller than the circle
+    .list-circle {
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 

@@ -5,7 +5,7 @@ import mymoriHomepg from './assets/homepg-myMori.gif';
 import flowspaceHomepg from './assets/homepg-flowspace.gif';
 import tacohavenHomepg from './assets/homepg-tacohaven.gif';
 import inmHomepg from './assets/homepg-inm.gif';
-// import smarttvHomepg from './assets/homepg-smartui.gif';
+import brandguide from './assets/homepg-brandguide.png';
 
 
 // Create an array that contains objects each representing a portfolio project, with properties that describe the project. The card component will obtain the data from this file, therefore making it dynamic 
@@ -22,8 +22,20 @@ export const projectCard = [
     size: "large",
     },
 
+    // Placeholder project, swap in real media, copy, and path when ready
     {
     id: 1,
+    mediaType : "image",
+    image : brandguide,
+    alt: "Brand Guidelines Card Image",
+    title: "LIFEGUARD BRAND GUIDELINES",
+    description : "Created the company's first brand guideline, aligning design, messaging, and tone across departments to build trust and approachability",
+    path: "/brandguidelines",
+    size: "small",
+    },
+
+    {
+    id: 2,
     mediaType : "image",
     image : linkedinHomepg,
     alt: "Linkedin Project Card Image ",
@@ -34,7 +46,7 @@ export const projectCard = [
     }, 
 
     {
-    id: 2,
+    id: 3,
     mediaType : "image",
     image : inmHomepg,
     alt: "INM Project Card Image", 
@@ -42,19 +54,6 @@ export const projectCard = [
     description : "A student app that informs, engages, and fosters community" ,
     // tags : ["Figma", "UX/UI"],
     path: "/inm",
-    size : "small",
-    }, 
-
-
-    {
-    id: 3,
-    mediaType : "image",
-    image : mymoriHomepg,
-    alt: "MyMori Project Card Image", 
-    title : "MYMORI",
-    description : "A hackathon project centered on driving social impact",
-    // tags : ["Figma", "Wireframing", "Design Thinking", "User Research"],
-    path: "/mymori",
     size : "small",
     }, 
 
@@ -70,6 +69,18 @@ export const projectCard = [
     size : "small",
     }, 
     
+  // {
+    // id: 3,
+    // mediaType : "image",
+    // image : mymoriHomepg,
+    // alt: "MyMori Project Card Image",
+    // title : "MYMORI",
+    // description : "A hackathon project centered on driving social impact",
+    // // tags : ["Figma", "Wireframing", "Design Thinking", "User Research"],
+    // path: "/mymori",
+    // size : "small",
+    // },
+
     // {
     // id: 5,
     // mediaType : "image",

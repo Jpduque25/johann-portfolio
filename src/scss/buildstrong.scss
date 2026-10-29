@@ -1,6 +1,6 @@
 @use 'style' as *;
 
-.buildstrong-writeup{
+.buildstrong-writeup, .brandguidelines-writeup{
 
     .card-grid{
             display:grid;
@@ -18,6 +18,7 @@
                     font-family:$kaneda-gothic;
                     font-size: 56px;
                     margin-bottom: 1rem;
+                    white-space: nowrap; // keep titles on one line
                 }
 
             }
@@ -41,11 +42,20 @@
 
      @media screen and (min-width: 1024px){
 
+        // One equal-width column per card, so any number of cards fills the row
         .card-grid{
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: none;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
         }
     }
 
 
 
+}
+
+// Word titles ("INTERNAL TEAMS") are longer than the percentages on BuildStrong,
+// so scale them down on narrow screens instead of letting them overflow the card
+.brandguidelines-writeup .card-grid .card .top .title{
+    font-size: clamp(32px, 9vw, 56px);
 }

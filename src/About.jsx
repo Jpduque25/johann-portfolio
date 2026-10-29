@@ -108,8 +108,18 @@ useGSAP(() => {
                         </div>
 
                         <div className ="bio-item">
-                            <h2>PRODUCT DESIGNER LOCATED IN VANCOUVER, B.C</h2>
-                            <p>Design to me is designing with intent as I want to push barriers and explore unconventional approaches in creating digital products and services. By balancing functionality and aesthetics, I aim to deliver experiences that are unique and meaningful in the digital space. </p>
+                            <h2>ABOUT ME</h2>
+
+                            <p>I’m a product designer and digital marketer based in Vancouver, BC, working in the health tech sector.
+                            </p>
+                            
+                            <br/>
+
+                            <p>I design product experiences, from UI/UX to design systems, and connect them with brand and marketing campaigns to make the product feel more cohesive.</p>
+                            
+                            <br/>
+
+                            <p>I’m always curious about learning new tools, from AI automation to motion and 3D, curiously finding ways to bring that to my professional and creative work.</p>
                         </div>
                     </div>
 

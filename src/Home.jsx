@@ -30,18 +30,20 @@ export default function Home(){
                           
                                 <div className = "text-left">
                                     
-                                    <div className="subheader">
-                                        <h3>JOHANN DUQUE</h3>
-                                        <div className = "circle"></div>
-                                        <h3>PRODUCT DESIGNER</h3>
-                                    </div>
+                                  
 
                                     <div className="banner-title">
-                                        <h1>APPROACHING DESIGN THROUGH A DIFFERENT LENS</h1>
+                                        <h1>HEY, I’M JOHANN</h1>
+                                    </div>
+
+                                    <div className="subheader">
+                                        <h3>PRODUCT DESIGNER</h3>
+                                        <div className = "circle"></div>
+                                        <h3>DIGITAL MARKETING</h3>
                                     </div>
 
                                     <div className="tagline">
-                                        <p>I craft digital experiences that are grounded in empathy and driven by business insight.</p>
+                                        <p>I craft digital experiences that blend business insights with a creative edge.</p>
                                     </div>
 
                                 </div>
@@ -62,7 +64,7 @@ export default function Home(){
                                             <img src= {workIcon} alt="work" />
                                             <span>RECENT EXPERIENCE</span>
                                         </div>
-                                        <p>Currently a Product Designer @Lifeguard Digital Health</p>
+                                        <p>Currently @Lifeguard Digital Health</p>
                                     </div>
 
                                     <div className="media-block second">

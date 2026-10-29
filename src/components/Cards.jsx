@@ -44,11 +44,12 @@ export default function Cards(){
                 className = 
                 {`
                 ${ index === 0 ? "large item" : ""} 
-                ${ index === 1 ? "medium item" : ""} 
-                ${ index === 2 ? "small item" : ""} 
-                ${ index === 3 ? "small item" : ""} 
-                ${ index === 4 ? "medium item" : ""} 
-                ${ index === 5 ? "large item" : ""}          
+                ${ index === 1 ? "medium item" : ""}
+                ${ index === 2 ? "small item" : ""}
+                ${ index === 3 ? "small item" : ""}
+                ${ index === 4 ? "medium item" : ""}
+                ${ index === 5 ? "medium item" : ""}
+                ${ index === 6 ? "large item" : ""}
                              
                 `}
                 />)}

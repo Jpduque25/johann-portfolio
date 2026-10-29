@@ -35,6 +35,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 // Import pages below 
 import Home from './Home';
 import BuildStrong from './Buildstrong';
+import BrandGuidelines from './BrandGuidelines';
 import LinkedinLearning from './LinkedinLearning';
 import MyMori from './MyMori';
 import Flowspace from './Flowspace';
@@ -108,6 +109,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/buildstrong" element={<BuildStrong/>}></Route>
+          <Route path="/brandguidelines" element={<BrandGuidelines/>} />
           <Route path="/linkedinlearning" element={<LinkedinLearning />} />
           <Route path="/mymori" element={<MyMori />} />
           <Route path="/flowspace" element={<Flowspace />} />

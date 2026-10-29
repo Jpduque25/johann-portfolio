@@ -1,12 +1,5 @@
 @use 'style' as *;
 
-@mixin navigation-text{
-    font-family: $inter;
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing:  1.25px;
-}
-
 // ------------ Navigation Header ---------------------
 
 .site-header-menu{

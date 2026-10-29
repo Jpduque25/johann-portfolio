@@ -27,10 +27,9 @@ const Navbar = () => {
                     <li><Link to = "/gallery">GALLERY</Link></li>
                     <li><Link to = "/about">ABOUT</Link></li>
                     
-                    <li><a className="resume" href="https://drive.google.com/file/d/1UaJ-T5fUWSZ17CpbSFC0lvIAyLrydf9r/view" target="_blank">RESUME</a></li>
+                    <li><a className="resume" href="https://drive.google.com/file/d/1zu37nXb3uUjeqvepvMEnrTIYmTd-ogm9/view?usp=sharing" target="_blank">RESUME</a></li>
                 </ul>
             </div>
-
 
 
             {/*  Hamburger menu  */}

@@ -79,16 +79,15 @@ const ProjectOverview = [
 
     },
 
-    // {
-    //     id : 6,
-    //     title : "Smart TV UI Redesign",
-    //     timeline : "1 Week",
-    //     disciplines: "UX Design",
-    //     tools: {figmaIcon},
-    //     description : "A design of a Smart TV UI utilizing design principles, making it user-friendly and intuitive.",
-        
-    // },
-
+    {
+        id : 7,
+        title : "Lifeguard Brand Guidelines",
+        timeline : "4 months",
+        disciplines: "Branding & Marketing, Graphic Design ",
+        tools: [figmaIcon, ], //update icons
+        collaborators : ["Copywriter", "Marketing Designer", "Management Team"],
+        description : "Lifeguard's branding and messaging had drifted apart across departments, leaving employees out of step with the clients and audiences they serve. Each department used its own visuals, terminology and tone, so clients and users were faced with inconsistencies across the products, marketing material, and documentation that was delivered. I picked up the project after multiple handoffs and collaborated with the marketing team to finished the guideline.",
+    },
 ]
 
 export default ProjectOverview;

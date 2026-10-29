@@ -24,6 +24,12 @@
     .tagline{
       font-size: 18px;
     }
+
+    .subheader h3{
+      @include navigation-text;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
 }
 
 
@@ -214,7 +220,7 @@
 
       .subheader{
         text-align: center;
-        margin-bottom: 1.75rem;
+        margin-bottom: 68px;
       }
 
       .banner-title{
@@ -343,7 +349,6 @@
 
       .subheader{
         text-align: left;
-        margin-bottom: 0rem;
       }
 
       .banner-title, .tagline{

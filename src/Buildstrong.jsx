@@ -467,7 +467,7 @@ export default function BuildStrong(){
 
 
 
-                    <BottomNavigation projectName={"Linkedin Learning"} link ={"/linkedinlearning"} direction = {"next"}/>
+                    <BottomNavigation projectName={"Lifeguard Brand Guidelines"} link ={"/brandguidelines"} direction = {"next"}/>
                 </section>
 
 
