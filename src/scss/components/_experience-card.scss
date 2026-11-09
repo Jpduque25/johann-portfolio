@@ -1,0 +1,82 @@
+@use '../abstracts' as *;
+
+// Experience row on the About page (components/ExperienceCard.jsx)
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background-color: $white;
+    border-radius: $radius;
+    padding: 36px 24px;
+    cursor: default;
+
+    .experience-card-years {
+        @include navigation-text;
+        line-height: 120%;
+    }
+
+    .experience-card-company {
+        line-height: 120%;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
+    // Hidden until the card is hovered, focused or tapped. display: none can't animate,
+    // so the row height goes 0fr -> 1fr instead, growing the card smoothly.
+    .experience-card-reveal {
+        display: grid;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        visibility: hidden;
+        // visibility flips after the close animation, so the text fades out before it's hidden
+        transition: grid-template-rows 300ms ease-in-out, opacity 300ms ease-in-out, visibility 0s linear 300ms;
+    }
+
+    .experience-card-description {
+        overflow: hidden;
+        min-height: 0;
+    }
+
+    &.is-open .experience-card-reveal {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        visibility: visible;
+        transition: grid-template-rows 300ms ease-in-out, opacity 300ms ease-in-out, visibility 0s;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $grey;
+        outline-offset: 4px;
+    }
+}
+
+
+@include mq(tablet) {
+    .experience-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+        min-height: 162px;
+
+        .experience-card-years {
+            flex: 0 0 160px;
+            margin-right: 80px;
+        }
+
+        .experience-card-main {
+            flex: 1;
+        }
+
+        // Matches the 48px h2 instead of the smaller global h3
+        .experience-card-company {
+            font-size: 3rem;
+        }
+
+        .experience-card-role {
+            margin-left: 64px;
+            text-align: right;
+        }
+    }
+}
