@@ -1,0 +1,41 @@
+// Single stylesheet entry, imported once in App.jsx.
+//
+// Order is the cascade: global layers first, then components and pages override them,
+// and utilities come last so a class like .mb-xl always wins.
+//
+//   abstracts/   tokens and mixins, no CSS output (pulled in with `@use '../abstracts' as *`)
+//   base/        reset, typography, keyframes
+//   layout/      .content widths, the 12-column .container grid, asset frames
+//   components/  pieces reused across pages
+//   pages/       page-specific overrides
+//   utilities/   single-purpose helper classes
+
+// Global
+@use 'base/fonts';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
+@use 'layout/grid';
+
+// Components
+@use 'components/case-study';
+@use 'components/bottom-nav';
+@use 'components/footer';
+@use 'components/project-banner';
+@use 'components/navigation';
+@use 'components/project-intro';
+
+// Pages
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/gallery';
+@use 'pages/buildstrong';
+@use 'pages/brandguidelines';
+@use 'pages/mymori';
+@use 'pages/linkedin';
+@use 'pages/tacohaven';
+@use 'pages/inm';
+
+// Utilities
+@use 'utilities/helpers';
+@use 'utilities/spacing';

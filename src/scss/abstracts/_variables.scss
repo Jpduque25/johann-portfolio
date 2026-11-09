@@ -1,0 +1,44 @@
+// Design tokens. Nothing in abstracts/ outputs CSS, so any file can
+// `@use '../abstracts' as *;` without duplicating styles.
+
+// COLORS
+$black: #000000;
+$white: #F6F6F6;
+$grey: #50566B;
+$grey-light: #D9D9D9;
+$border: #E1E1E1;
+
+// TYPOGRAPHY
+$kaneda-gothic: 'kaneda-gothic', sans-serif;
+$nunito: 'Nunito', sans-serif;
+$inter: 'Inter', sans-serif;
+
+// SHAPE
+$radius: 20px;
+$shadow-sm: 0 3px 6px 0 rgba(0, 0, 0, 0.1);  // cards and frames inside a page
+$shadow-lg: 0 10px 20px 0 rgba(0, 0, 0, 0.1); // raised surfaces (nav, banners, project cards)
+
+// BREAKPOINTS (min-width), used with the `mq` mixin
+$breakpoints: (
+    mobile: 320px,
+    mobile-md: 375px,
+    mobile-lg: 425px,
+    tablet: 768px,
+    laptop: 1024px,
+    desktop: 1440px,
+    wide: 2560px,
+);
+
+// SPACING scale, generates the utilities in utilities/_spacing.scss
+$space: (
+    0: 0,
+    sm: 12px,
+    md: 20px,
+    lg: 32px,
+    xl: 48px,
+    xxl: 60px,
+
+    content: 160px,
+    section: 240px,
+    textCenter: 320px,
+);

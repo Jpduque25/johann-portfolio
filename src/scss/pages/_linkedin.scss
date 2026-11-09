@@ -1,29 +1,28 @@
-@use 'style' as *;
+@use '../abstracts' as *;
 
-.linkedin-writeup{
-
-    .bulletin{
-        li{
+.linkedin-writeup {
+    .bulletin {
+        li {
             list-style-type: disc;
         }
     }
 
-    .bar{
+    // Full-bleed stats bar
+    .bar {
         background-color: $white;
         overflow: hidden;
         width: 100vw;
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
+        box-shadow: $shadow-sm;
 
-        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
-        
-        .column{
+        .column {
             margin: auto;
             text-align: center;
             display: grid;
 
-            .content{
-                p{
+            .content {
+                p {
                     font-family: $inter;
                     font-weight: 300;
                     line-height: 120%;
@@ -32,158 +31,143 @@
         }
     }
 
-
-    .vert-line{
-        position:relative;
+    .vert-line {
+        position: relative;
         left: 50%;
-        border-left: 2px solid #D9D9D9;
+        border-left: 2px solid $grey-light;
         border-radius: 10px;
         height: 200px;
         margin-bottom: 25px;
         width: 2px;
-    }   
-
-    .card-bg{
-        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
     }
 
-  
-    & .card-bg.first{
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+    .card-bg {
+        box-shadow: $shadow-sm;
     }
 
-    & .card-bg.third{
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+    // Keep the callouts' own spacing, the h4 margins below are for body text only
+    .user-problem h4 {
+        margin-bottom: 20px;
     }
 
+    .statement-bar h4 {
+        margin-bottom: 0;
+    }
+
+    // Three-card stack, so the third card rounds the bottom instead of the fourth
+    & .card-bg.first {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }
+
+    & .card-bg.third {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
 }
 
 
-
-@media screen and (min-width: 320px){
-     .linkedin-writeup{
-
-        h4{
-            margin-bottom:32px;
+@include mq(mobile) {
+    .linkedin-writeup {
+        h4 {
+            margin-bottom: 32px;
         }
-   
-        .bar{
+
+        .bar {
             padding: 50px 0px;
-           
-            .column{
+
+            .column {
                 max-width: 16.75rem;
                 grid-template-columns: auto;
                 gap: 40px;
-    
-                .content{
+
+                .content {
                     margin: auto;
-    
-                    p{
+
+                    p {
                         font-size: 16px;
                     }
                 }
             }
         }
-   
-    
-        .card-bg{
-            h5{
+
+        .card-bg {
+            h5 {
                 font-size: 14px;
             }
-
-            
         }
- 
-        .statement-bar{
-            h4{
+
+        .statement-bar {
+            h4 {
                 width: 85%;
                 font-size: 20px;
             }
         }
-    
     }
-
-
 }
 
-
-@media screen and (min-width: 425px){
-    .linkedin-writeup{
-        .goal{
+@include mq(mobile-lg) {
+    .linkedin-writeup {
+        .goal {
             max-width: 23.75rem;
             margin: auto;
         }
-    
     }
 }
 
-
-@media screen and (min-width: 768px){
-    .linkedin-writeup{
-
-        h4{
-            margin-bottom:10px;
+@include mq(tablet) {
+    .linkedin-writeup {
+        h4 {
+            margin-bottom: 10px;
         }
 
-        .bar{
+        .bar {
             padding: 74px 0px;
 
-            .column{
+            .column {
                 max-width: 42.5rem;
                 grid-template-columns: repeat(3, 1fr);
-        
-                .content{
-                    p{
+
+                .content {
+                    p {
                         font-size: 18px;
                     }
                 }
             }
         }
-    
-        .statement-bar{
-            h4{
+
+        .statement-bar {
+            h4 {
                 width: 80%;
                 font-size: 26px;
             }
         }
-    
     }
-
 }
 
-
-@media screen and (min-width: 1024px){
-     .linkedin-writeup{
-
-        .bar{
-            .column{
+@include mq(laptop) {
+    .linkedin-writeup {
+        .bar {
+            .column {
                 max-width: 57.5rem;
                 gap: 157px;
             }
         }
 
-        .statement-bar{
-            h4{
+        .statement-bar {
+            h4 {
                 width: 45%;
             }
-
         }
     }
-
-
 }
 
-@media screen and (min-width: 1440px){
-    
-    .linkedin-writeup{
-        .bar{
-            .column{
+@include mq(desktop) {
+    .linkedin-writeup {
+        .bar {
+            .column {
                 max-width: 66.5rem;
             }
         }
     }
-
-
 }

@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none; // site-wide: lists are unstyled unless a page adds bullets back
+}
+
+body {
+    background-image: url("../../img/portfoliobg.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}

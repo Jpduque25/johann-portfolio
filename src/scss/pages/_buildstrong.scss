@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+// Results cards, shared by BuildStrong and Brand Guidelines
+.buildstrong-writeup, .brandguidelines-writeup {
+    .card-grid {
+        display: grid;
+        gap: 25px;
+
+        .card {
+            background-color: $white;
+            padding: 32px;
+            border-radius: $radius;
+            box-shadow: $shadow-sm;
+
+            .top {
+                .title {
+                    display: block;
+                    font-family: $kaneda-gothic;
+                    font-size: 56px;
+                    margin-bottom: 1rem;
+                    white-space: nowrap; // keep titles on one line
+                }
+            }
+        }
+    }
+
+    @include mq(mobile) {
+        .card-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @include mq(laptop) {
+        // One equal-width column per card, so any number of cards fills the row
+        .card-grid {
+            grid-template-columns: none;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+        }
+    }
+}

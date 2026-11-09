@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Min-width media query by breakpoint name, e.g. `@include mq(tablet) { ... }`
+@mixin mq($name) {
+    @media screen and (min-width: map.get($breakpoints, $name)) {
+        @content;
+    }
+}
+
+// Small uppercase-style label text used by the nav, home subheader and gallery tags
+@mixin navigation-text {
+    font-family: $inter;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+}

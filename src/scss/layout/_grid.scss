@@ -1,0 +1,178 @@
+@use '../abstracts' as *;
+
+// Page-width column that every case study section sits in
+@include mq(mobile) {
+    .content {
+        max-width: 16.75rem;
+        margin: 80px auto;
+    }
+}
+
+@include mq(mobile-lg) {
+    .content {
+        max-width: 23.75rem;
+        margin: 80px auto;
+    }
+}
+
+@include mq(tablet) {
+    .content {
+        max-width: 42.5rem;
+        margin: 280px auto; // space between sections
+    }
+}
+
+@include mq(laptop) {
+    .content {
+        max-width: 57.5rem;
+    }
+}
+
+@include mq(desktop) {
+    .content {
+        max-width: 85rem;
+    }
+}
+
+
+// 12-column grid: .item.left / .item.right / .item.center, plus asset frames
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .item.left {
+        grid-column: 1/13;
+    }
+
+    .item.right {
+        grid-column: 1/13;
+    }
+
+    .item.center {
+        grid-column: 1/13;
+    }
+
+    // Image frame, full width
+    .assetsContainer {
+        grid-column: 1/13;
+
+        .imageContainer {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: $white;
+            border: 1px solid $border;
+            border-radius: $radius;
+            overflow: hidden; // clip images to the rounded corners
+        }
+    }
+
+    // Image frames, side by side
+    .assetsContainer.two-column {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+
+        .left {
+            grid-column: 1 / 7;
+        }
+
+        .right {
+            grid-column: 7 / 13;
+        }
+
+        .center {
+            grid-column: 1 / 13;
+        }
+
+        .imageContainer {
+            display: flex;
+            grid-template-columns: repeat(12, 1fr);
+            grid-column: 1 / 13;
+            justify-content: center;
+            flex-direction: column;
+            background-color: $white;
+            border: 1px solid $border;
+            border-radius: $radius;
+            overflow: hidden; // clip images to the rounded corners
+        }
+
+        .assets {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .article {
+            grid-column: span 12;
+        }
+    }
+}
+
+// Figma plugin embed
+.figma-plugin-container {
+    max-width: 66.5rem;
+    margin: auto;
+
+    h3 {
+        text-align: center;
+    }
+}
+
+
+@include mq(mobile) {
+    .container {
+        .assetsContainer.two-column {
+            .left {
+                grid-column: 1 / 13;
+            }
+
+            .right {
+                grid-column: 1/13;
+            }
+        }
+    }
+}
+
+@include mq(tablet) {
+    .container {
+        .item.left {
+            grid-column: 1/7;
+        }
+
+        .item.right {
+            grid-column: 8/13;
+            grid-row: 2;
+        }
+
+        .item.center {
+            grid-column: 3/11;
+        }
+    }
+
+    .item.center {
+        margin-top: 180px;
+    }
+}
+
+@include mq(laptop) {
+    .container {
+        .item.left {
+            grid-column: 1/8;
+        }
+
+        .item.right {
+            grid-column: 9/13;
+            grid-row: 2;
+        }
+
+        .assetsContainer.two-column {
+            .left {
+                grid-column: 1 / 7;
+            }
+
+            .right {
+                grid-column: 7/13;
+            }
+        }
+    }
+}

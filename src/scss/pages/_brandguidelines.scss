@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+// Builds on the shared results cards in _buildstrong.scss
+
+// Word titles ("INTERNAL TEAMS") are longer than the percentages on BuildStrong,
+// so scale them down on narrow screens instead of letting them overflow the card
+.brandguidelines-writeup .card-grid .card .top .title {
+    font-size: clamp(32px, 9vw, 56px);
+}

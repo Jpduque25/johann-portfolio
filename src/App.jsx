@@ -3,25 +3,8 @@
 import Navbar from './components/navigationbar';
 import Footer from './components/Footer';
 
-// IMPORT STYLES BELOW
-import './scss/style.scss';
-import './scss/animate.scss';
-import './scss/gallery.scss';
-import './scss/card.scss';
-import './scss/BottomNav.scss';
-import './scss/footer.scss';
-import './scss/projectbanner.scss';
-import './scss/navigationBar.scss';
-import './scss/home.scss';
-import './scss/about.scss';
-import './scss/buildstrong.scss';
-import './scss/mymori.scss';
-import './scss/linkedin.scss';
-import './scss/tacohaven.scss';
-import './scss/inm.scss';
-import './scss/projectCard.scss';
-import './scss/flowspace.scss';
-import './scss/spacing.scss';
+// IMPORT STYLES BELOW (load order and structure are documented in main.scss)
+import './scss/main.scss';
 
 
 import React from 'react';

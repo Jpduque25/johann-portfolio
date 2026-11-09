@@ -1,0 +1,176 @@
+@use '../abstracts' as *;
+
+// Building blocks shared by the case study pages. Pages override these in pages/.
+
+// Stacked cards (.card-bg.first ... .card-bg.fourth round the top and bottom of the stack)
+.container-card {
+    .card-bg {
+        background-color: $white;
+        margin-bottom: 20px;
+        box-shadow: $shadow-sm;
+    }
+
+    & .card-bg.first {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }
+
+    & .card-bg.fourth {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+}
+
+// Two stacks of small cards side by side
+.text-card {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    .card-top {
+        grid-column: 1/13;
+    }
+
+    .card-bottom {
+        grid-column: 1/13;
+    }
+
+    .card-sm {
+        background-color: $white;
+        padding: 14px 25px;
+        box-shadow: $shadow-sm;
+    }
+
+    & .card-sm.first, .card-sm.third {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }
+
+    & .card-sm.second, .card-sm.fourth {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+}
+
+// Full-width highlighted statement
+.statement-bar {
+    background-color: $white;
+    text-align: center;
+    padding: 50px 0px;
+    box-shadow: $shadow-lg;
+
+    h5 {
+        margin: 0px 0px 20px 0px;
+        letter-spacing: 1.25px;
+    }
+
+    h4 {
+        padding: 0;
+        margin: 0 auto;
+        width: 45%;
+    }
+
+    .icon-title {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icon-img {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// Numbered goal list
+.list-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $grey;
+    font-family: $kaneda-gothic;
+    font-size: 35px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-sm;
+}
+
+.goal {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        padding-left: 80px;
+        // Center the text against the number circle
+        display: flex;
+        align-items: center;
+        min-height: 60px; // circle height, so one-line items still center on it
+    }
+
+    // Center the circle on the text when the text runs taller than the circle
+    .list-circle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// Centered problem statement callout
+.user-problem {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+
+    h4 {
+        margin: 20px auto;
+    }
+}
+
+
+@include mq(mobile) {
+    .user-problem {
+        h4 {
+            font-size: 20px;
+        }
+    }
+
+    .card-bg {
+        padding: 23px 19px;
+    }
+
+    .statement-bar.uiredesign-project {
+        h4 {
+            width: 80%;
+        }
+    }
+}
+
+@include mq(tablet) {
+    .user-problem {
+        width: 100%;
+
+        h4 {
+            font-size: 26px;
+        }
+    }
+
+    .card-bg {
+        padding: 30px 30px;
+    }
+
+    .text-card {
+        .card-top {
+            grid-column: 1/7;
+        }
+
+        .card-bottom {
+            grid-column: 7/13;
+        }
+    }
+}

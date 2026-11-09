@@ -1,0 +1,105 @@
+@use '../abstracts' as *;
+
+body {
+    font-family: $nunito;
+    line-height: 160%;
+    font-size: 16px;
+    color: $grey;
+}
+
+h1, h2, h3 {
+    font-family: $kaneda-gothic;
+}
+
+h1 {
+    line-height: 100%;
+}
+
+h4 {
+    font-family: $nunito;
+}
+
+h5 {
+    font-family: $inter;
+}
+
+p, li {
+    line-height: 160%;
+}
+
+// Text styles
+.card-bold {
+    font-family: $inter;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card-text {
+    font-family: $inter;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+// Image captions
+.article {
+    font-family: $inter;
+    font-weight: 300;
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+@include mq(mobile) {
+    h1 {
+        font-size: 3.125rem;
+    }
+
+    h2 {
+        font-size: 2.625rem;
+        margin-bottom: 32px;
+        line-height: 40px;
+    }
+
+    h3 {
+        font-size: 2.188rem;
+        margin-bottom: 32px;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        margin-bottom: 32px;
+    }
+
+    h5 {
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 1.25px;
+    }
+}
+
+@include mq(tablet) {
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 9rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 48px;
+    }
+
+    h3 {
+        font-size: 2.188rem;
+        margin-bottom: 48px;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 1.625rem;
+        margin-bottom: 12px;
+    }
+}

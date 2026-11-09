@@ -1,58 +1,54 @@
-@use 'style' as *;
+@use '../abstracts' as *;
 
+// Overview card under each case study banner (components/ProjectCard.jsx)
 
-.project-intro{
-    .context{
+.project-intro {
+    .context {
         background-color: $white;
-        border-radius: 20px;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+        border-radius: $radius;
+        box-shadow: $shadow-lg;
 
-        .list{
+        .list {
             list-style-type: none;
             font-family: $inter;
             font-weight: 300;
             font-size: 18px;
             display: flex;
 
-        
-            .tools-row{
-            display: flex;
-            gap: 10px;
-            
+            .tools-row {
+                display: flex;
+                gap: 10px;
             }
 
-            .collaborators-row{
+            .collaborators-row {
                 display: flex;
                 flex-direction: column;
-                
-                ul{
+
+                ul {
                     text-decoration: none;
                     list-style-type: none;
-                    margin:0;
+                    margin: 0;
                 }
             }
-            
-        }     
-    
-        .icon-list{
+        }
+
+        .icon-list {
             list-style-type: none;
             display: flex;
             gap: 8px;
-    
         }
-   
-        .proj-overview{
+
+        .proj-overview {
             margin-bottom: 40px;
         }
 
-        .button-list{
+        .button-list {
             display: flex;
             flex-direction: column;
-   
         }
 
-        .proj-button{
-            border: 1px solid $grey; 
+        .proj-button {
+            border: 1px solid $grey;
             padding: 15px 50px;
             margin: 0 10px 10px 0;
             border-radius: 8px;
@@ -63,70 +59,49 @@
             color: $grey;
             transition: background-color 0.25s ease-in-out;
             letter-spacing: 2px;
-            gap: 20px
+            gap: 20px;
         }
 
-
-
-        .proj-button:hover{
+        .proj-button:hover {
             background-color: $black;
             color: $white;
         }
-        
     }
-    
-
 }
 
 
-@media screen and (min-width: 320px){
-    
-    .project-intro{
-        .context{
+@include mq(mobile) {
+    .project-intro {
+        .context {
             padding: 56px 20px;
 
-            .list{
+            .list {
                 flex-direction: column;
                 gap: 20px;
                 margin-bottom: 50px;
             }
-        
         }
-        
- 
-        .content{
+
+        .content {
             margin-top: 48px;
         }
     }
-
 }
 
-
-
-@media screen and (min-width: 768px){
-    .project-intro{
-        .context{
+@include mq(tablet) {
+    .project-intro {
+        .context {
             padding: 50px 50px;
 
-            .list{
+            .list {
                 flex-direction: row;
                 justify-content: space-between;
+            }
 
-    
-            }   
-            
-             .button-list{
+            .button-list {
                 display: block;
                 width: 100%;
             }
         }
     }
-}
-
-@media screen and (min-width: 1024px){
-    // .project-intro{
-    //     .content{
-    //         margin-top: 120px;
-    //     }
-    // }
 }

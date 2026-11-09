@@ -1,0 +1,120 @@
+@use '../abstracts' as *;
+
+.inm-writeup {
+    .text-card {
+        .card-top {
+            grid-column: 1/13;
+        }
+
+        .card-bottom {
+            grid-column: 1/13;
+        }
+
+        // Each small card stands alone here, so round every corner
+        & .card-sm.first, .card-sm.second, .card-sm.third, .card-sm.fourth, .card-sm.fifth {
+            border-radius: $radius;
+        }
+    }
+
+    .card-grid {
+        .card {
+            background-color: $white;
+            color: $white;
+            padding: 25px;
+            border-radius: $radius;
+            box-shadow: $shadow-sm;
+
+            .card-bold {
+                p {
+                    color: $grey;
+                }
+            }
+
+            .card-text {
+                color: black;
+            }
+        }
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+
+        .marketplace-feature img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+    }
+}
+
+
+@include mq(mobile) {
+    .inm-writeup {
+        .card-grid {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: auto;
+            gap: 27px;
+
+            .card {
+                .card-text {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .flex {
+            flex-direction: column;
+            margin-bottom: 80px;
+            gap: 32px;
+        }
+
+        & .flex.second {
+            flex-direction: column-reverse;
+        }
+
+        .item.left {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+@include mq(mobile-lg) {
+    .inm-writeup {
+        .card-grid {
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+    }
+}
+
+@include mq(tablet) {
+    .inm-writeup {
+        .item.left {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@include mq(laptop) {
+    .inm-writeup {
+        .card-grid {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .flex {
+            flex-direction: row;
+            margin-bottom: 100px;
+        }
+
+        & .flex.second {
+            flex-direction: row;
+        }
+
+        .flex > div {
+            flex: 1;
+        }
+    }
+}

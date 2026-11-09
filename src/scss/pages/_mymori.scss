@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.mymori-writeup {
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .video {
+        max-width: 100%;
+        height: auto;
+        border-radius: $radius;
+        border: 1px solid $border;
+    }
+}
+
+
+@include mq(mobile) {
+    .mymori-writeup {
+        .statement-bar {
+            h4 {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@include mq(tablet) {
+    .mymori-writeup {
+        .item.center {
+            h4 {
+                text-align: center;
+            }
+        }
+
+        .user-needs {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            gap: 120px;
+        }
+    }
+}
