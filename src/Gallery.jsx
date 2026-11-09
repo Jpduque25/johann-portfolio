@@ -5,16 +5,18 @@ import { useGSAP } from '@gsap/react';
 import { Children, useState } from 'react';
 import  {autotrace, connexionEnterprise, inmMockup, myMori, neonHorizon, courtShotTalk, beautyintheBeholder, smartUI, buttonAnimation, lifeguardLiteShowcase, lifeguardLiteMockup4, lifeguardPrintMaterial, pitchNPutt, streetMural, floatingConvenience, cnTower, forestCanyon} from './assets/gallery-assets/gallery-assets'
 
+import { cameraIcon, movieEditIcon, figmaOutlineIcon, pencilIcon } from './assets/icons/icons'
+
 import GalleryHead from './components/SEO/GalleryHead'
 
 
 // Filter tags, each grid-item's data-category matches one of these ids
 const tags = [
     { id: "all", label: "All" },
-    { id: "digital-design", label: "Digital Design" },
-    { id: "video-editing", label: "Video Editing" },
-    { id: "ui-ux-design", label: "UI/UX Design" },
-    { id: "photography", label: "Photography" },
+    { id: "digital-design", label: "Digital Design", icon: pencilIcon },
+    { id: "video-editing", label: "Video Editing", icon: movieEditIcon },
+    { id: "ui-ux-design", label: "UI/UX Design", icon: figmaOutlineIcon },
+    { id: "photography", label: "Photography", icon: cameraIcon },
 ]
 
 
@@ -74,6 +76,10 @@ export default function Gallery(){
                             aria-pressed = {activeTag === tag.id}
                             onClick = {() => setActiveTag(tag.id)}
                         >
+                            {/* Drawn as a CSS mask so the icon takes the tag's text color */}
+                            {tag.icon && (
+                                <span className="tag-icon" style={{ "--icon": `url("${tag.icon}")` }} aria-hidden="true"></span>
+                            )}
                             {tag.label}
                         </button>
                     ))}

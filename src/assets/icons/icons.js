@@ -10,6 +10,13 @@ import linkedinIcon3 from './linkedin-icon3.png';
 import navigationArrow from './project-arrow.png';
 
 
+// Gallery filter icons (single-color SVGs, recolored in CSS with mask-image)
+import cameraIcon from './camera-icon.svg';
+import movieEditIcon from './movie-edit-icon.svg';
+import figmaOutlineIcon from './figma-outline-icon.svg';
+import pencilIcon from './pencil-icon.svg';
+
+
 // Tools Icons
 import figmaIcon from './figma-icon.png';
 import htmlIcon from './html-icon.png';
@@ -20,4 +27,4 @@ import cssIcon from './css-icon.png';
 import reactIcon from './react-icon.png';
 
 
-export {linkedinIcon1, linkedinIcon2, linkedinIcon3, figmaIcon, navigationArrow, htmlIcon, bootstrapIcon, jsIcon, sassIcon, cssIcon, reactIcon};
+export {linkedinIcon1, linkedinIcon2, linkedinIcon3, figmaIcon, navigationArrow, htmlIcon, bootstrapIcon, jsIcon, sassIcon, cssIcon, reactIcon, cameraIcon, movieEditIcon, figmaOutlineIcon, pencilIcon};

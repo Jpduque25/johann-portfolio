@@ -38,31 +38,59 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 16px 32px;
   width: 85vw;
   box-sizing: border-box;
   padding-left: 15px; // matches the column gutter
   margin: 0 auto 40px;
 
+  // Figma "iconButton": icon + label, underlined when hovered or selected
   .tag {
-    @include navigation-text;
-    line-height: 120%;
-    text-transform: uppercase;
-    color: $grey;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $nunito;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: $secondary;
     background-color: transparent;
-    border: 1px solid $grey;
-    border-radius: 999px;
-    padding: 8px 18px;
+    border: none;
+    border-bottom: 2px solid transparent; // reserves the underline's space so hovering doesn't shift the row
+    padding: 0 0 4px;
     cursor: pointer;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    transition: color 300ms ease-in-out, border-color 300ms ease-in-out;
 
-    &:hover {
-      background-color: rgba(80, 86, 107, 0.1);
+    &:hover,
+    &.active {
+      color: $grey;
+      border-bottom-color: $grey;
     }
 
-    &.active {
-      background-color: $grey;
-      color: $white;
+    &:focus-visible {
+      outline: 2px solid $grey;
+      outline-offset: 4px;
+    }
+  }
+
+  // Single-color icon file used as a mask, filled with the tag's current text color
+  .tag-icon {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    background-color: currentColor;
+    mask: var(--icon) center / contain no-repeat;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+  }
+
+  @include mq(tablet) {
+    .tag {
+      font-size: 20px;
+    }
+
+    .tag-icon {
+      width: 32px;
+      height: 32px;
     }
   }
 }
