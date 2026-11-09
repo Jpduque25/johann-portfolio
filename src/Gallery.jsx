@@ -144,7 +144,7 @@ export default function Gallery(){
 
                 <div className="grid-item" data-category="digital-design">
                     <img src= {lifeguardPrintMaterial} alt="LifeguardLite product features poster" />
-                    <h5>LIFEGUARDLITE - Print Materials</h5>
+                    <h5>LIFEGUARD - Print Materials</h5>
 
                 </div>
 

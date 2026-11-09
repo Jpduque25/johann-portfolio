@@ -14,10 +14,10 @@ export const projectCard = [
     {
     id: 0,
     mediaType : "video",
-    image : buildstrongHomepg,
+    image : buildstrongHomepg, 
     alt: "BuildStrong Card Image",
     title: "BUILDSTRONG",
-    description : "Manage and lead the project to improve user engagement and make UI changes",
+    description : "Managed and led the project to improve user engagement and make UI changes",
     path: "/buildstrong",
     size: "large",
     },
