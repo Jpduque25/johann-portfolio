@@ -6,8 +6,9 @@ import linkedinIcon2 from './linkedin-icon2.png';
 import linkedinIcon3 from './linkedin-icon3.png';
 
 
-// UI Assets 
+// UI Assets
 import navigationArrow from './project-arrow.png';
+import arrowUpRightCircleIcon from './arrow-up-right-circle-icon.svg';
 
 
 // Gallery filter icons (single-color SVGs, recolored in CSS with mask-image)
@@ -27,4 +28,4 @@ import cssIcon from './css-icon.png';
 import reactIcon from './react-icon.png';
 
 
-export {linkedinIcon1, linkedinIcon2, linkedinIcon3, figmaIcon, navigationArrow, htmlIcon, bootstrapIcon, jsIcon, sassIcon, cssIcon, reactIcon, cameraIcon, movieEditIcon, figmaOutlineIcon, pencilIcon};
+export {linkedinIcon1, linkedinIcon2, linkedinIcon3, figmaIcon, navigationArrow, htmlIcon, bootstrapIcon, jsIcon, sassIcon, cssIcon, reactIcon, cameraIcon, movieEditIcon, figmaOutlineIcon, pencilIcon, arrowUpRightCircleIcon};

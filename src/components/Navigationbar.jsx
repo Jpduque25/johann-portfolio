@@ -1,20 +1,36 @@
 import React from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Squeeze as Hamburger } from 'hamburger-react'
 import { Link } from "react-router-dom";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import Logo from '../assets/Johann-logo-new.png'
 
 
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const navEl = useRef();
+
+    // Slide down from above the window on page load. The navbar sits outside the routes,
+    // so this runs on a refresh, not when moving between pages. clearProps drops the
+    // inline transform afterwards, otherwise the fixed mobile menu would be positioned
+    // relative to the nav instead of the window.
+    useGSAP(() => {
+        gsap.from(navEl.current, {
+            yPercent: -200,
+            duration: 0.9,
+            ease: "power3.out",
+            clearProps: "transform",
+        });
+    });
 
     const handleClick = () => {
         setIsOpen(false);
     };
 
     return (
-        <nav className = "site-header-menu">
+        <nav ref = {navEl} className = "site-header-menu">
 
             <div className="nav-container">
 

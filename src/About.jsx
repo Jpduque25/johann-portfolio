@@ -1,6 +1,16 @@
 import profilePhoto from './assets/about-assets/profile-photo.jpg';
 import AboutHead from './components/SEO/AboutHead';
 import ExperienceCard from './components/ExperienceCard';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Fade up from below. clearProps removes GSAP's inline transform afterwards,
+// otherwise it would override the CSS hover scale on the skill pills.
+const reveal = { opacity: 0, y: 25, duration: 0.8, ease: "power2.out", clearProps: "opacity,transform" };
 
 
 // Page content, edit these lists to update the page
@@ -45,10 +55,39 @@ const education = [
 
 export default function AboutMe(){
 
+    const pageEl = useRef();
+
+    useGSAP(() => {
+        // Intro is in view on load, so photo then bio animate straight away
+        gsap.from([".about-photo", ".about-bio"], { ...reveal, stagger: 0.15 });
+
+        // Everything below appears one by one as it scrolls into view
+        gsap.utils.toArray(".about-label, .experience-card, .about-row").forEach((el) => {
+            gsap.from(el, { ...reveal, scrollTrigger: { trigger: el, start: "top 85%" } });
+        });
+
+        // Tool groups play in sequence on one timeline: heading fades up, the divider
+        // grows left to right, then after a pause the pills fade in place (no movement)
+        gsap.utils.toArray(".about-tool-group").forEach((group) => {
+            const tl = gsap.timeline({ scrollTrigger: { trigger: group, start: "top 85%" } });
+
+            tl.from(group.querySelector(".about-tool-heading h3"), reveal)
+              .from(group.querySelector(".about-divider"), {
+                  scaleX: 0,
+                  opacity: 0,
+                  transformOrigin: "left center",
+                  duration: 1,
+                  ease: "power2.out",
+                  clearProps: "opacity,transform",
+              }, 0.2)
+              .from(group.querySelectorAll(".about-tag"), { ...reveal, y: 0, stagger: 0.25 }, 1.4);
+        });
+    }, { scope: pageEl });
+
     return(
         <>
             <AboutHead/>
-            <main className="about-page">
+            <main ref={pageEl} className="about-page">
 
                 <section className="about-intro">
                     <div className="about-photo">

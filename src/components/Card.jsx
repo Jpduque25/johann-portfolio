@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import arrowButton from  '../assets/home-assets/arrow-button.png';
+import { arrowUpRightCircleIcon } from '../assets/icons/icons';
 
 // Object destructuring to destructure first parameter
 export default function Card({alt, image, mediaType = "image", title, description, path, className}){
@@ -41,7 +41,7 @@ export default function Card({alt, image, mediaType = "image", title, descriptio
 
                     <div className="right">
                         <div className = "button">
-                            <img src= {arrowButton} alt="" />
+                            <img src= {arrowUpRightCircleIcon} alt="" />
                         </div>
                     </div>
                 </div>                
